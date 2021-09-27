@@ -1,0 +1,517 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 482965600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EjercicioPutStepDefinition.before(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 102917200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EjercicioGetStepDefinition.before(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 46585800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EjercicioPostStepDefinition.before(Scenario)"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "Metodo GET a la API",
+        "description": "",
+        "id": "ejercicio-de-automatización-metodo-get-en-apis;metodo-get-a-la-api",
+        "type": "scenario",
+        "keyword": "Escenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 400625500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "que configuramos los headers",
+            "match": {
+              "location": "EjercicioGetStepDefinition.queConfiguroLosHeaders(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cabeceras",
+                  "valor"
+                ]
+              },
+              {
+                "cells": [
+                  "Authorization",
+                  "Bearer TOKEN"
+                ]
+              }
+            ],
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 4570571200,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "se ejecuta el servicio con la configuracion de los headers",
+            "match": {
+              "location": "EjercicioGetStepDefinition.seEjecutaElServicioConLaConfiguracionDeLosHeaders(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "servicio",
+                  "url",
+                  "metodo",
+                  "formato"
+                ]
+              },
+              {
+                "cells": [
+                  "pet",
+                  "https://petstore.swagger.io/v2/pet/10",
+                  "get",
+                  "json"
+                ]
+              }
+            ],
+            "keyword": "Cuando "
+          },
+          {
+            "result": {
+              "duration": 7070600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "verificamos que el codigo de respuesta sea el numero \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 54
+                }
+              ],
+              "location": "EjercicioGetStepDefinition.verificamosQueElCodigoDeRespuestaSeaElNumero(int)"
+            },
+            "keyword": "Entonces "
+          },
+          {
+            "result": {
+              "duration": 20939500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "se guarda la respuesta de la ejecucion del servicio",
+            "match": {
+              "location": "EjercicioGetStepDefinition.seGuardaLaRespuestaDeLaEjecucionDelServicio()"
+            },
+            "keyword": "Y "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Ejercicio"
+          },
+          {
+            "name": "@MetodoGET"
+          }
+        ]
+      }
+    ],
+    "name": "Ejercicio de Automatización metodo GET en APIs",
+    "description": "  Como colaborador de Everis\n  Quiero redactar y automatizar APIs\n  Para recibir respuestas a las solicitudes enviadas",
+    "id": "ejercicio-de-automatización-metodo-get-en-apis",
+    "keyword": "Característica",
+    "uri": "src/test/resources/features/EjercicioGET.feature",
+    "tags": [
+      {
+        "name": "@Ejercicio",
+        "type": "Tag",
+        "location": {
+          "line": 3,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 4,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 24946600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EjercicioPutStepDefinition.before(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 33121500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EjercicioGetStepDefinition.before(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 33337700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EjercicioPostStepDefinition.before(Scenario)"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "Metodo POST a la API",
+        "description": "",
+        "id": "ejercicio-de-automatización-metodo-post-en-apis;metodo-post-a-la-api",
+        "type": "scenario",
+        "keyword": "Escenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5296000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "que se configuran los headers",
+            "match": {
+              "location": "EjercicioPostStepDefinition.queSeConfiguranLosHeaders(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cabeceras",
+                  "valor"
+                ]
+              },
+              {
+                "cells": [
+                  "Authorization",
+                  "Bearer TOKEN"
+                ]
+              }
+            ],
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 15351800,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "configurar el body",
+            "match": {
+              "location": "EjercicioPostStepDefinition.configurarElBody(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "name",
+                  "status"
+                ]
+              },
+              {
+                "cells": [
+                  "123513131",
+                  "Prueba",
+                  "available"
+                ]
+              }
+            ],
+            "keyword": "Y "
+          },
+          {
+            "result": {
+              "duration": 1110826100,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "se ejecuta el servicio con la configuracion del header",
+            "match": {
+              "location": "EjercicioPostStepDefinition.seEjecutaElServicioConLaConfiguracionDelHeader(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "servicio",
+                  "url",
+                  "metodo",
+                  "formato"
+                ]
+              },
+              {
+                "cells": [
+                  "pet",
+                  "https://petstore.swagger.io/v2/pet",
+                  "post",
+                  "json"
+                ]
+              }
+            ],
+            "keyword": "Cuando "
+          },
+          {
+            "result": {
+              "duration": 6505300,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "verificar que el codigo de respuesta sea el numero \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 52
+                }
+              ],
+              "location": "EjercicioPostStepDefinition.verificarQueElCodigoDeRespuestaSeaElNumero(int)"
+            },
+            "keyword": "Entonces "
+          },
+          {
+            "result": {
+              "duration": 5287200,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "guardar la respuesta de la ejecucion del servicio",
+            "match": {
+              "location": "EjercicioPostStepDefinition.guardarLaRespuestaDeLaEjecucionDelServicio()"
+            },
+            "keyword": "Y "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Ejercicio"
+          },
+          {
+            "name": "@MetodoPOST"
+          }
+        ]
+      }
+    ],
+    "name": "Ejercicio de Automatización metodo POST en APIs",
+    "description": "  Como colaborador de Everis\n  Quiero redactar y automatizar APIs\n  Para recibir respuestas a las solicitudes enviadas",
+    "id": "ejercicio-de-automatización-metodo-post-en-apis",
+    "keyword": "Característica",
+    "uri": "src/test/resources/features/EjercicioPOST.feature",
+    "tags": [
+      {
+        "name": "@Ejercicio",
+        "type": "Tag",
+        "location": {
+          "line": 3,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 4,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 20246700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EjercicioPutStepDefinition.before(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 35640600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EjercicioGetStepDefinition.before(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 15675100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EjercicioPostStepDefinition.before(Scenario)"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "Metodo PUT a la API",
+        "description": "",
+        "id": "ejercicio-de-automatización-metodo-put-en-apis;metodo-put-a-la-api",
+        "type": "scenario",
+        "keyword": "Escenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4033900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "que vamos a configurar los headers",
+            "match": {
+              "location": "EjercicioPutStepDefinition.queVamosAConfigurarLosHeaders(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cabeceras",
+                  "valor"
+                ]
+              },
+              {
+                "cells": [
+                  "Authorization",
+                  "Bearer TOKEN"
+                ]
+              }
+            ],
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 4599600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "configuramos el body",
+            "match": {
+              "location": "EjercicioPutStepDefinition.configuramosElBody(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "name",
+                  "status"
+                ]
+              },
+              {
+                "cells": [
+                  "10",
+                  "perro",
+                  "pending"
+                ]
+              }
+            ],
+            "keyword": "Y "
+          },
+          {
+            "result": {
+              "duration": 642430000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "se ejecuta el servicio con configuracion de los headers",
+            "match": {
+              "location": "EjercicioPutStepDefinition.seEjecutaElServicioConConfiguracionDeLosHeaders(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "servicio",
+                  "url",
+                  "metodo",
+                  "formato"
+                ]
+              },
+              {
+                "cells": [
+                  "Publicaciones",
+                  "https://petstore.swagger.io/v2/pet",
+                  "put",
+                  "json"
+                ]
+              }
+            ],
+            "keyword": "Cuando "
+          },
+          {
+            "result": {
+              "duration": 3269900,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "verificamos que el codigo de respuesta muestre el numero \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 58
+                }
+              ],
+              "location": "EjercicioPutStepDefinition.verificamosQueElCodigoDeRespuestaMuestreElNumero(int)"
+            },
+            "keyword": "Entonces "
+          },
+          {
+            "result": {
+              "duration": 4002400,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "guardamos la respuesta de la ejecucion del servicio",
+            "match": {
+              "location": "EjercicioPutStepDefinition.guardamosLaRespuestaDeLaEjecucionDelServicio()"
+            },
+            "keyword": "Y "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Ejercicio"
+          },
+          {
+            "name": "@MetodoPUT"
+          }
+        ]
+      }
+    ],
+    "name": "Ejercicio de Automatización metodo PUT en APIs",
+    "description": "  Como colaborador de Everis\n  Quiero redactar y automatizar APIs\n  Para recibir respuestas a las solicitudes enviadas",
+    "id": "ejercicio-de-automatización-metodo-put-en-apis",
+    "keyword": "Característica",
+    "uri": "src/test/resources/features/EjercicioPUT.feature",
+    "tags": [
+      {
+        "name": "@Ejercicio",
+        "type": "Tag",
+        "location": {
+          "line": 3,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

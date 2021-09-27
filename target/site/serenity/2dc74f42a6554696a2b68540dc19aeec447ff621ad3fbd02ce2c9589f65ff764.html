@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Solicitud de consulta de comida para mascotas escenario incorrecto</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<!-- ImgPreview -->
+<script src="scripts/imgpreview.full.jquery.js" type="text/javascript"></script>
+</head>
+
+<body class="results-page">
+
+
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+        <span class="breadcrumbs">
+            <a href="index.html" class="breadcrumbs">Home</a>
+
+            > <a href="88fb9265da8f8ea76640bd70678e31209b0f22a782ef78bc84547a7fc27015df.html">Ejemplo De Automatizaci&oacute;n En Apis</a>
+        > Solicitud de consulta de comida para mascotas escenario incorrecto
+        </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 10-08-2021 20:42</span>
+    <br style="clear:left"/>
+</div>
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                                <div>
+                                    <h3 class="discreet-story-header">
+                                        <i class="fa fa-2x fa-comments-o"></i>
+                                        <span class="story-header-title">Ejemplo De Automatización En Apis </span>
+                                    </h3>
+
+                                </div>
+
+                        </td>
+                        <td valign="top">
+                                <p class="tag">
+                                    <span class="badge tag-badge" style="background:default;">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;"
+                                                                      href="fd66b78274968ba95aa8ae8ec7cccfa59908ba8ffb933c3cfab7614ed67825e9.html">Pet Food Facts
+                                    (tag)</a>
+                                </span>
+                                </p>
+                                <p class="tag">
+                                    <span class="badge tag-badge" style="background:default;">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;"
+                                                                      href="8f7817e37da570b55e969b3e220c2eab03e29ab99a48bf9229eddb6952aecab5.html">Un Happy Path
+                                    (tag)</a>
+                                </span>
+                                </p>
+                                <p class="tag">
+                                    <span class="badge tag-badge" style="background:default;">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;"
+                                                                      href="d863a3f5a88770c655cade5ea46f88a811639d8277b12dddf982d63d606ab44f.html">Ejemplos Automatizacion
+                                    (tag)</a>
+                                </span>
+                                </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">
+                                    Solicitud de consulta de comida para mascotas escenario incorrecto
+                                        <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+
+
+    <div id="tablecontents">
+        <div>
+            <table class="step-table">
+                <tr class="step-titles">
+                    <th width="65">
+                    </th>
+                    <th class="step-description-column greentext">
+                        Steps
+                    </th>
+
+                    <th width="130" class="greentext">Outcome</th>
+                    <th width="100" class="greentext"><i title="Duration" class="far fa-clock"></i></th>
+                </tr>
+                <tr class="step-table-separator">
+                    <td colspan="5"></td>
+                </tr>
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="50" class="step-icon">
+                            <a name="0"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection0 success-icon"
+                                       style="margin-left: 20px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                                   style="display:block;">
+                                    <span class="top-level-step">
+                                                Dado que configuro las cabeceras<br><table class='embedded'><thead><th>cabeceras</th><th>valor</th></thead><tbody><tr><td>Authorization</td><td>Bearer TOKEN</td></tr></tbody></table>
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                        <td width="100"><span class="top-level-step">0.01s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection0" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-0"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                Configurando las cabeceras del servicio...
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="50" class="step-icon">
+                            <a name="1"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection1 success-icon"
+                                       style="margin-left: 20px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                                   style="display:block;">
+                                    <span class="top-level-step">
+                                                Cuando ejecuto el servicio con la configuracion de las cabeceras<br><table class='embedded'><thead><th>servicio</th><th>url</th><th>metodo</th><th>formato</th></thead><tbody><tr><td>Pet Food Facts</td><td>https://world.openpetfoodfacts.org/a</td><td>Get</td><td>xml</td></tr></tbody></table>
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                        <td width="100"><span class="top-level-step">1.93s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection1" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="1-0"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-0')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection1-0 success-icon"
+                                       style="margin-left: 40px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-0')"
+                                   style="display:block;">
+                                    <span class="nested-step">
+                                                Ejecutar el servicio con la configuración de las cabeceras...
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-step">1.93s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection1-0" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="90" class="step-icon">
+                            <a name="1-0-0"></a>
+                                <span style="margin-left: 60px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                GET https://world.openpetfoodfacts.org/a
+                                        </span>
+                                <span class="evidence">
+                                        <span class="piece-of-evidence">
+                    <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-5">
+                            REST Query
+                        </button>
+                    </span>
+                    <!-- Modal -->
+                    <div class="rest-query-details">
+                        <div class="collapse multi-collapse" id="restModal-REST-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Response</h4>
+                                        <p>Status code: 404</p>
+                                        <p>Content Type: null</p>
+                                        <h4>Request Headers</h4>
+                                        <pre>Authorization=Bearer TOKEN<br>Accept=*/*</pre>
+                                        <h4>Content Body</h4>
+                                        <pre></pre>
+                                        <h4>Request Cookies</h4>
+                                        <pre></pre>
+                                        <h4>Response Headers</h4>
+                                        <pre>Server: nginx/1.10.3<br>Date: Wed, 11 Aug 2021 01:42:16 GMT<br>Content-Type: text/html; charset=UTF-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Expires: Tue, 10 Aug 2021 01:42:16 GMT<br>X-Frame-Options: DENY<br>X-Content-Type-Options: nosniff<br>X-Download-Options: noopen<br>X-XSS-Protection: 1; mode=block<br>X-Request-ID: ZOYLB4GGjYIKKajy<br>Content-Encoding: gzip</pre>
+                                    <h4>Response Body</h4>
+                                        <pre>&lt;html class=&quot;no-js&quot; lang=&quot;en&quot; data-serverdomain=&quot;openpetfoodfacts.org&quot;&gt;<br>  &lt;head&gt;<br>    &lt;meta charset=&quot;utf-8&quot;/&gt;<br>    &lt;title&gt;Error&lt;/title&gt;<br>    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;/&gt;<br>    &lt;meta property=&quot;fb:app_id&quot; content=&quot;219331381518041&quot;/&gt;<br>    &lt;meta property=&quot;og:type&quot; content=&quot;food&quot;/&gt;<br>    &lt;meta property=&quot;og:title&quot; content=&quot;&quot;/&gt;<br>    &lt;meta property=&quot;og:url&quot; content=&quot;https://world.openpetfoodfacts.org&quot;/&gt;<br>    &lt;meta property=&quot;og:image&quot; content=&quot;https://static.openpetfoodfacts.org/images/misc/openpetfoodfacts-logo-en.png&amp;amp;hl=fr&quot;/&gt;<br>    &lt;meta property=&quot;og:description&quot; content=&quot;Ingrédients, composition nutritionnelle et information sur les produits alimentaires pour animaux de compagnie du monde entier dans une base de données libre et ouverte&quot;/&gt;<br>    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;57x57&quot; href=&quot;https://static.openpetfoodfacts.org/images/favicon/apple-touch-icon-57x57.png&quot;/&gt;<br>    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;60x60&quot; href=&quot;https://static.openpetfoodfacts.org/images/favicon/apple-touch-icon-60x60.png&quot;/&gt;<br>    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;72x72&quot; href=&quot;https://static.openpetfoodfacts.org/images/favicon/apple-touch-icon-72x72.png&quot;/&gt;<br>    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;76x76&quot; href=&quot;https://static.openpetfoodfacts.org/images/favicon/apple-touch-icon-76x76.png&quot;/&gt;<br>    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;114x114&quot; href=&quot;https://static.openpetfoodfacts.org/images/favicon/apple-touch-icon-114x114.png&quot;/&gt;<br>    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;120x120&quot; href=&quot;https://static.openpetfoodfacts.org/images/favicon/apple-touch-icon-120x120.png&quot;/&gt;<br>    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;144x144&quot; href=&quot;https://static.openpetfoodfacts.org/images/favicon/apple-touch-icon-144x144.png&quot;/&gt;<br>    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;152x152&quot; href=&quot;https://static.openpetfoodfacts.org/images/favicon/apple-touch-icon-152x152.png&quot;/&gt;<br>    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;180x180&quot; href=&quot;https://static.openpetfoodfacts.org/images/favicon/apple-touch-icon-180x180.png&quot;/&gt;<br>    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;https://static.openpetfoodfacts.org/images/favicon/favicon-32x32.png&quot; sizes=&quot;32x32&quot;/&gt;<br>    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;https://static.openpetfoodfacts.org/images/favicon/android-chrome-192x192.png&quot; sizes=&quot;192x192&quot;/&gt;<br>    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;https://static.openpetfoodfacts.org/images/favicon/favicon-96x96.png&quot; sizes=&quot;96x96&quot;/&gt;<br>    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;https://static.openpetfoodfacts.org/images/favicon/favicon-16x16.png&quot; sizes=&quot;16x16&quot;/&gt;<br>    &lt;link rel=&quot;manifest&quot; href=&quot;/cgi/manifest.pl&quot;/&gt;<br>    &lt;link rel=&quot;mask-icon&quot; href=&quot;https://static.openpetfoodfacts.org/images/favicon/safari-pinned-tab.svg&quot; color=&quot;#5bbad5&quot;/&gt;<br>    &lt;link rel=&quot;shortcut icon&quot; href=&quot;https://static.openpetfoodfacts.org/images/favicon/favicon.ico&quot;/&gt;<br>    &lt;meta name=&quot;msapplication-TileColor&quot; content=&quot;#da532c&quot;/&gt;<br>    &lt;meta name=&quot;msapplication-TileImage&quot; content=&quot;https://static.openpetfoodfacts.org/images/favicon/mstile-144x144.png&quot;/&gt;<br>    &lt;meta name=&quot;msapplication-config&quot; content=&quot;https://static.openpetfoodfacts.org/images/favicon/browserconfig.xml&quot;/&gt;<br>    &lt;meta name=&quot;theme-color&quot; content=&quot;#ffffff&quot;/&gt;<br>    &lt;link rel=&quot;canonical&quot; href=&quot;https://world.openpetfoodfacts.org&quot;/&gt;<br>    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://static.openpetfoodfacts.org/css/dist/app.css?v=1590858299&quot;/&gt;<br>    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://static.openpetfoodfacts.org/css/dist/jqueryui/themes/base/jquery-ui.css&quot;/&gt;<br>    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css&quot; integrity=&quot;sha256-FdatTf20PQr/rWg+cAKfl6j4/IY3oohFAJ7gVC3M34E=&quot; crossorigin=&quot;anonymous&quot;/&gt;<br>    &lt;link rel=&quot;search&quot; href=&quot;https://world.openpetfoodfacts.org/cgi/opensearch.pl&quot; type=&quot;application/opensearchdescription+xml&quot; title=&quot;Open Pet Food Facts&quot;/&gt;<br>    &lt;style media=&quot;all&quot;&gt;<br>.show-when-logged-in {display:none}<br><br>&lt;/style&gt;<br>    &lt;script async=&quot;async&quot; src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-31851927-13&quot;/&gt;<br>    &lt;script&gt;<br>  window.dataLayer = window.dataLayer || [];<br>  function gtag(){dataLayer.push(arguments);}<br>  gtag('js', new Date());<br><br>  gtag('config', 'UA-31851927-13');<br>&lt;/script&gt;<br>  &lt;/head&gt;<br>  &lt;body&gt;<br>    &lt;nav class=&quot;top-bar&quot; data-topbar=&quot;data-topbar&quot; id=&quot;top-bar&quot;&gt;<br>      &lt;ul class=&quot;title-area&quot;&gt;<br>        &lt;li class=&quot;name&quot;&gt;<br>          &lt;h2&gt;<br>            &lt;a shape=&quot;rect&quot; href=&quot;/&quot; style=&quot;font-size:1rem;&quot;&gt;Open Pet Food Facts&lt;/a&gt;<br>          &lt;/h2&gt;<br>        &lt;/li&gt;<br>        &lt;li class=&quot;toggle-topbar menu-icon&quot;&gt;<br>          &lt;a shape=&quot;rect&quot; href=&quot;#&quot;&gt;<br>            &lt;span&gt;Menu&lt;/span&gt;<br>          &lt;/a&gt;<br>        &lt;/li&gt;<br>      &lt;/ul&gt;<br>      &lt;section class=&quot;top-bar-section&quot;&gt;<br>        &lt;label for=&quot;select_country&quot; style=&quot;display:none&quot;&gt;Country&lt;/label&gt;<br>        &lt;ul class=&quot;left&quot;&gt;<br>          &lt;li class=&quot;has-form has-dropdown&quot; id=&quot;select_country_li&quot;&gt;<br>            &lt;select id=&quot;select_country&quot; style=&quot;width:100%&quot; data-placeholder=&quot;Country&quot;&gt;<br>              &lt;option/&gt;<br>            &lt;/select&gt;<br>          &lt;/li&gt;<br>        &lt;/ul&gt;<br>        &lt;ul class=&quot;right&quot;&gt;<br>          &lt;li class=&quot;show-for-large-up&quot;&gt;<br>            &lt;form enctype=&quot;application/x-www-form-urlencoded&quot; method=&quot;get&quot; action=&quot;/cgi/search.pl&quot;&gt;<br>              &lt;div class=&quot;row collapse&quot;&gt;<br>                &lt;div class=&quot;small-8 columns&quot;&gt;<br>                  &lt;input type=&quot;text&quot; placeholder=&quot;Search for a product&quot; name=&quot;search_terms&quot; value=&quot;&quot;/&gt;<br>                  &lt;input type=&quot;hidden&quot; name=&quot;search_simple&quot; value=&quot;1&quot;/&gt;<br>                  &lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;process&quot;/&gt;<br>                &lt;/div&gt;<br>                &lt;div class=&quot;small-4 columns&quot;&gt;<br>                  &lt;button type=&quot;submit&quot; title=&quot;Search&quot;&gt;<br>                    &lt;svg viewbox=&quot;0 0 24 24&quot; class=&quot;icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;<br>                      &lt;path d=&quot;M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z&quot;/&gt;<br>                      &lt;path d=&quot;M0 0h24v24H0z&quot; fill=&quot;none&quot;/&gt;<br>                    &lt;/svg&gt;<br>                  &lt;/button&gt;<br>                &lt;/div&gt;<br>              &lt;/div&gt;<br>            &lt;/form&gt;<br>          &lt;/li&gt;<br>          &lt;li class=&quot;show-for-large-only&quot;&gt;<br>            &lt;a shape=&quot;rect&quot; href=&quot;/cgi/search.pl&quot; title=&quot;Advanced search&quot;&gt;<br>              &lt;svg viewbox=&quot;0 0 24 24&quot; class=&quot;icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;<br>                &lt;path d=&quot;M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z&quot;/&gt;<br>                &lt;path d=&quot;M0 0h24v24H0z&quot; fill=&quot;none&quot;/&gt;<br>              &lt;/svg&gt;<br>            &lt;/a&gt;<br>          &lt;/li&gt;<br>          &lt;li class=&quot;show-for-xlarge-up&quot;&gt;<br>            &lt;a shape=&quot;rect&quot; href=&quot;/cgi/search.pl&quot;&gt;<br>              &lt;svg viewbox=&quot;0 0 24 24&quot; class=&quot;icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;<br>                &lt;path d=&quot;M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z&quot;/&gt;<br>                &lt;path d=&quot;M0 0h24v24H0z&quot; fill=&quot;none&quot;/&gt;<br>              &lt;/svg&gt;<br> Advanced search            &lt;/a&gt;<br>          &lt;/li&gt;<br>          &lt;li class=&quot;show-for-large-only&quot;&gt;<br>            &lt;a shape=&quot;rect&quot; href=&quot;/cgi/search.pl?graph=1&quot; title=&quot;Graphs and maps&quot;&gt;<br>              &lt;svg viewbox=&quot;0 0 24 24&quot; class=&quot;icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;<br>                &lt;path d=&quot;M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z&quot;/&gt;<br>                &lt;path fill=&quot;none&quot; d=&quot;M0 0h24v24H0z&quot;/&gt;<br>              &lt;/svg&gt;<br>            &lt;/a&gt;<br>          &lt;/li&gt;<br>          &lt;li class=&quot;show-for-xlarge-up&quot;&gt;<br>            &lt;a shape=&quot;rect&quot; href=&quot;/cgi/search.pl?graph=1&quot;&gt;<br>              &lt;svg viewbox=&quot;0 0 24 24&quot; class=&quot;icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;<br>                &lt;path d=&quot;M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z&quot;/&gt;<br>                &lt;path fill=&quot;none&quot; d=&quot;M0 0h24v24H0z&quot;/&gt;<br>              &lt;/svg&gt;<br> Graphs and maps            &lt;/a&gt;<br>          &lt;/li&gt;<br>          &lt;li class=&quot;show-for-large-up divider&quot;/&gt;<br>          &lt;li&gt;<br>            &lt;a shape=&quot;rect&quot; href=&quot;/discover&quot;&gt;Discover&lt;/a&gt;<br>          &lt;/li&gt;<br>          &lt;li&gt;<br>            &lt;a shape=&quot;rect&quot; href=&quot;/contribute&quot;&gt;Contribute&lt;/a&gt;<br>          &lt;/li&gt;<br>          &lt;li class=&quot;show-for-large&quot;&gt;<br>            &lt;a shape=&quot;rect&quot; class=&quot;button success&quot; href=&quot;/open-pet-food-facts-mobile-app&quot; title=&quot;Get the app&quot;&gt;<br>              &lt;svg viewbox=&quot;0 0 24 24&quot; class=&quot;icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;<br>                &lt;path d=&quot;M16 1H8C6.34 1 5 2.34 5 4v16c0 1.66 1.34 3 3 3h8c1.66 0 3-1.34 3-3V4c0-1.66-1.34-3-3-3zm-2 20h-4v-1h4v1zm3.25-3H6.75V4h10.5v14z&quot;/&gt;<br>                &lt;path d=&quot;M0 0h24v24H0z&quot; fill=&quot;none&quot;/&gt;<br>              &lt;/svg&gt;<br>            &lt;/a&gt;<br>          &lt;/li&gt;<br>          &lt;li class=&quot;show-for-xlarge-up&quot;&gt;<br>            &lt;a shape=&quot;rect&quot; class=&quot;button success&quot; href=&quot;/open-pet-food-facts-mobile-app&quot;&gt;<br>              &lt;svg viewbox=&quot;0 0 24 24&quot; class=&quot;icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;<br>                &lt;path d=&quot;M16 1H8C6.34 1 5 2.34 5 4v16c0 1.66 1.34 3 3 3h8c1.66 0 3-1.34 3-3V4c0-1.66-1.34-3-3-3zm-2 20h-4v-1h4v1zm3.25-3H6.75V4h10.5v14z&quot;/&gt;<br>                &lt;path d=&quot;M0 0h24v24H0z&quot; fill=&quot;none&quot;/&gt;<br>              &lt;/svg&gt;<br> Get the app            &lt;/a&gt;<br>          &lt;/li&gt;<br>        &lt;/ul&gt;<br>      &lt;/section&gt;<br>    &lt;/nav&gt;<br>    &lt;nav class=&quot;tab-bar show-for-small-only&quot;&gt;<br>      &lt;div class=&quot;left-small&quot; style=&quot;padding-top:4px;&quot;&gt;<br>        &lt;a shape=&quot;rect&quot; class=&quot;left-off-canvas-toggle button postfix anonymous&quot; href=&quot;#idOfLeftMenu&quot; role=&quot;button&quot; aria-controls=&quot;idOfLeftMenu&quot; aria-expanded=&quot;false&quot;&gt;<br>          &lt;svg viewbox=&quot;0 0 24 24&quot; class=&quot;icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;<br>            &lt;path d=&quot;M3 5v14a2 2 0 002 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5a2 2 0 00-2 2zm12 4c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z&quot;/&gt;<br>            &lt;path d=&quot;M0 0h24v24H0z&quot; fill=&quot;none&quot;/&gt;<br>          &lt;/svg&gt;<br>        &lt;/a&gt;<br>      &lt;/div&gt;<br>      &lt;div class=&quot;middle tab-bar-section&quot; style=&quot;padding-top:4px;&quot;&gt;<br>        &lt;form enctype=&quot;application/x-www-form-urlencoded&quot; method=&quot;get&quot; action=&quot;/cgi/search.pl&quot;&gt;<br>          &lt;div class=&quot;row collapse&quot;&gt;<br>            &lt;div class=&quot;small-8 columns&quot;&gt;<br>              &lt;input type=&quot;text&quot; placeholder=&quot;Search for a product&quot; name=&quot;search_terms&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; name=&quot;search_simple&quot; value=&quot;1&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;process&quot;/&gt;<br>            &lt;/div&gt;<br>            &lt;div class=&quot;small-2 columns&quot;&gt;<br>              &lt;button type=&quot;submit&quot; class=&quot;button postfix&quot;&gt;<br>                &lt;svg viewbox=&quot;0 0 24 24&quot; class=&quot;icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;<br>                  &lt;path d=&quot;M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z&quot;/&gt;<br>                  &lt;path d=&quot;M0 0h24v24H0z&quot; fill=&quot;none&quot;/&gt;<br>                &lt;/svg&gt;<br>              &lt;/button&gt;<br>            &lt;/div&gt;<br>            &lt;div class=&quot;small-2 columns&quot;&gt;<br>              &lt;a shape=&quot;rect&quot; href=&quot;/cgi/search.pl&quot; title=&quot;Advanced search&quot;&gt;<br>                &lt;svg viewbox=&quot;0 0 24 24&quot; class=&quot;icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;<br>                  &lt;path d=&quot;M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z&quot;/&gt;<br>                  &lt;path d=&quot;M0 0h24v24H0z&quot; fill=&quot;none&quot;/&gt;<br>                &lt;/svg&gt;<br>                &lt;svg viewbox=&quot;0 0 24 24&quot; class=&quot;icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;<br>                  &lt;path d=&quot;M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z&quot;/&gt;<br>                  &lt;path d=&quot;M0 0h24v24H0z&quot; fill=&quot;none&quot;/&gt;<br>                &lt;/svg&gt;<br>              &lt;/a&gt;<br>            &lt;/div&gt;<br>          &lt;/div&gt;<br>        &lt;/form&gt;<br>      &lt;/div&gt;<br>    &lt;/nav&gt;<br>    &lt;div class=&quot;off-canvas-wrap&quot; data-offcanvas=&quot;data-offcanvas&quot;&gt;<br>      &lt;div class=&quot;inner-wrap&quot;&gt;<br>        &lt;aside class=&quot;left-off-canvas-menu&quot;&gt;<br>          &lt;div id=&quot;aside_column&quot;&gt;<br>            &lt;div class=&quot;block&quot;&gt;<br>              &lt;h3 class=&quot;block_title&quot;&gt;Sign in&lt;/h3&gt;<br>              &lt;div class=&quot;block_content&quot;&gt;<br>                &lt;p&gt;Sign-in to add or edit products.&lt;/p&gt;<br>                &lt;form enctype=&quot;application/x-www-form-urlencoded&quot; method=&quot;post&quot; action=&quot;/cgi/session.pl&quot;&gt;<br>                  &lt;div class=&quot;row&quot;&gt;<br>                    &lt;div class=&quot;small-12 columns&quot;&gt;<br>                      &lt;label&gt;<br>Username or e-mail address:<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;                        &lt;input type=&quot;text&quot; name=&quot;user_id&quot; autocomplete=&quot;username&quot; required=&quot;required&quot;/&gt;<br>                      &lt;/label&gt;<br>                    &lt;/div&gt;<br>                    &lt;div class=&quot;small-12 columns&quot;&gt;<br>                      &lt;label&gt;<br>Password<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;                        &lt;input type=&quot;password&quot; name=&quot;password&quot; autocomplete=&quot;current-password&quot; required=&quot;required&quot;/&gt;<br>                      &lt;/label&gt;<br>                    &lt;/div&gt;<br>                    &lt;div class=&quot;small-12 columns&quot;&gt;<br>                      &lt;label&gt;<br>                        &lt;input checked=&quot;checked&quot; type=&quot;checkbox&quot; name=&quot;remember_me&quot;/&gt;<br><br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;Remember me<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;                      &lt;/label&gt;<br>                    &lt;/div&gt;<br>                  &lt;/div&gt;<br>                  &lt;input type=&quot;submit&quot; class=&quot;button small&quot; name=&quot;.submit&quot; value=&quot;Sign in&quot;/&gt;<br>                &lt;/form&gt;<br>                &lt;p&gt;<br>Not registered yet?<br>                  &lt;a shape=&quot;rect&quot; href=&quot;/cgi/user.pl&quot;&gt;Create your account.&lt;/a&gt;<br>                &lt;/p&gt;<br>              &lt;/div&gt;<br>            &lt;/div&gt;<br>            &lt;div class=&quot;block&quot;&gt;<br>              &lt;h3 class=&quot;block_title&quot;&gt;Add a product&lt;/h3&gt;<br>              &lt;div class=&quot;block_content&quot;&gt;<br>                &lt;form enctype=&quot;multipart/form-data&quot; method=&quot;post&quot; action=&quot;/cgi/product.pl&quot;&gt;<br>                  &lt;div id=&quot;imgsearchdiv_block_aside&quot;&gt;<br>                    &lt;a shape=&quot;rect&quot; class=&quot;button small expand&quot; id=&quot;imgsearchbutton_block_aside&quot; href=&quot;#&quot;&gt;<br>                      &lt;svg viewbox=&quot;0 0 24 24&quot; class=&quot;icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;<br>                        &lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;3.2&quot;/&gt;<br>                        &lt;path d=&quot;M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z&quot;/&gt;<br>                        &lt;path d=&quot;M0 0h24v24H0z&quot; fill=&quot;none&quot;/&gt;<br>                      &lt;/svg&gt;<br> Picture with barcode<br>                      &lt;input type=&quot;file&quot; class=&quot;img_input&quot; id=&quot;imgupload_search_block_aside&quot; accept=&quot;image/*&quot; name=&quot;imgupload_search&quot; style=&quot;position: absolute;     right:0;     bottom:0;     top:0;     cursor:pointer;     opacity:0;     font-size:40px;&quot;/&gt;<br>                    &lt;/a&gt;<br>                  &lt;/div&gt;<br>                  &lt;div class=&quot;progress&quot; id=&quot;progressbar_block_aside&quot; style=&quot;display:none&quot;&gt;<br>                    &lt;span class=&quot;meter&quot; id=&quot;progressmeter_block_aside&quot; style=&quot;width:0%&quot;/&gt;<br>                  &lt;/div&gt;<br>                  &lt;div class=&quot;alert-box info&quot; id=&quot;imgsearchmsg_block_aside&quot; data-alert=&quot;data-alert&quot; style=&quot;display:none&quot;&gt;<br><br>  Sending image<br>                      &lt;a shape=&quot;rect&quot; class=&quot;close&quot; href=&quot;#&quot;&gt;×&lt;/a&gt;<br>                  &lt;/div&gt;<br>                  &lt;div class=&quot;alert-box alert&quot; id=&quot;imgsearcherror_block_aside&quot; data-alert=&quot;data-alert&quot; style=&quot;display:none&quot;&gt;<br><br>  Upload error<br>                      &lt;a shape=&quot;rect&quot; class=&quot;close&quot; href=&quot;#&quot;&gt;×&lt;/a&gt;<br>                  &lt;/div&gt;<br>                  &lt;div class=&quot;row collapse&quot;&gt;<br>                    &lt;div class=&quot;small-9 columns&quot;&gt;<br>                      &lt;input type=&quot;text&quot; name=&quot;code&quot; placeholder=&quot;or Barcode&quot;/&gt;<br>                    &lt;/div&gt;<br>                    &lt;div class=&quot;small-3 columns&quot;&gt;<br>                      &lt;input type=&quot;submit&quot; class=&quot;button postfix&quot; value=&quot;Add&quot;/&gt;<br>                    &lt;/div&gt;<br>                  &lt;/div&gt;<br>                  &lt;input type=&quot;submit&quot; class=&quot;button tiny&quot; value=&quot;Product without barcode&quot;/&gt;<br>                &lt;/form&gt;<br>              &lt;/div&gt;<br>            &lt;/div&gt;<br>            &lt;div class=&quot;block&quot;&gt;<br>              &lt;h3 class=&quot;block_title&quot;&gt;Donate to support our work&lt;/h3&gt;<br>              &lt;div class=&quot;block_content&quot;&gt;<br>                &lt;a shape=&quot;rect&quot; href=&quot;https://world.openfoodfacts.org/donate-to-open-food-facts&quot;&gt;<br>                  &lt;img src=&quot;https://static.openfoodfacts.org/images/svg/donate-icon.svg&quot; alt=&quot;Donate to Open Beauty Facts&quot;/&gt;<br>                &lt;/a&gt;<br>                &lt;p&gt;<br>Open Pet Food Facts est développé par une association à but non lucratif indépendante de l'industrie. Open Food Facts est fait pour tous, par tous, et est financé par tous. Vous pouvez soutenir notre travail en                   &lt;a shape=&quot;rect&quot; href=&quot;https://world.openfoodfacts.org/donate-to-open-food-facts&quot;&gt;donnant à Open Beauty Facts&lt;/a&gt;<br> et aussi en utilisant le                   &lt;a shape=&quot;rect&quot; href=&quot;https://www.lilo.org/fr/open-food-facts/?utm_source=open-food-facts&quot;&gt;moteur de recherche Lilo&lt;/a&gt;<br>.                  &lt;br clear=&quot;none&quot;/&gt;<br>                  &lt;b&gt;Merci beaucoup !&lt;/b&gt;<br>                &lt;/p&gt;<br>              &lt;/div&gt;<br>            &lt;/div&gt;<br>          &lt;/div&gt;<br>        &lt;/aside&gt;<br>        &lt;a shape=&quot;rect&quot; class=&quot;exit-off-canvas&quot;/&gt;<br>        &lt;div class=&quot;row full-width&quot; style=&quot;max-width: 100% !important;&quot; data-equalizer=&quot;data-equalizer&quot;&gt;<br>          &lt;div class=&quot;xxlarge-1 xlarge-2 large-3 medium-4 columns hide-for-small&quot; style=&quot;background-color:#fafafa;padding-top:1rem;&quot; data-equalizer-watch=&quot;data-equalizer-watch&quot;&gt;<br>            &lt;div class=&quot;sidebar&quot;&gt;<br>              &lt;div style=&quot;text-align:center&quot;&gt;<br>                &lt;a shape=&quot;rect&quot; href=&quot;/&quot;&gt;<br>                  &lt;img id=&quot;logo&quot; src=&quot;https://static.openpetfoodfacts.org/images/misc/openfoodfacts-logo-en-178x150.png&quot; srcset=&quot;https://static.openpetfoodfacts.org/images/misc/openfoodfacts-logo-en-356x300.png 2x&quot; width=&quot;178&quot; height=&quot;150&quot; alt=&quot;Open Pet Food Facts&quot; style=&quot;margin-bottom:0.5rem&quot;/&gt;<br>                &lt;/a&gt;<br>              &lt;/div&gt;<br>              &lt;p&gt;<br>Open Pet Food Facts rassemble des informations et des données sur les produits alimentaires pour animaux de compagnie du monde entier.                &lt;br clear=&quot;none&quot;/&gt;<br>              &lt;/p&gt;<br>              &lt;div class=&quot;flex-video&quot;&gt;<br>                &lt;embed width=&quot;640&quot; height=&quot;480&quot; src=&quot;https://static.openpetfoodfacts.org/images/misc/opff-leaderboard.svg&quot;/&gt;<br>              &lt;/div&gt;<br>              &lt;form enctype=&quot;application/x-www-form-urlencoded&quot; method=&quot;get&quot; class=&quot;hide-for-large-up&quot; action=&quot;/cgi/search.pl&quot;&gt;<br>                &lt;div class=&quot;row collapse&quot;&gt;<br>                  &lt;div class=&quot;small-9 columns&quot;&gt;<br>                    &lt;input type=&quot;text&quot; placeholder=&quot;Search for a product&quot; name=&quot;search_terms&quot;/&gt;<br>                    &lt;input type=&quot;hidden&quot; name=&quot;search_simple&quot; value=&quot;1&quot;/&gt;<br>                    &lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;process&quot;/&gt;<br>                  &lt;/div&gt;<br>                  &lt;div class=&quot;small-2 columns&quot;&gt;<br>                    &lt;button type=&quot;submit&quot; class=&quot;button postfix&quot;&gt;<br>                      &lt;svg viewbox=&quot;0 0 24 24&quot; class=&quot;icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;<br>                        &lt;path d=&quot;M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z&quot;/&gt;<br>                        &lt;path d=&quot;M0 0h24v24H0z&quot; fill=&quot;none&quot;/&gt;<br>                      &lt;/svg&gt;<br>                    &lt;/button&gt;<br>                  &lt;/div&gt;<br>                  &lt;div class=&quot;small-1 columns&quot;&gt;<br>                    &lt;label class=&quot;right inline&quot;&gt;<br>                      &lt;a shape=&quot;rect&quot; href=&quot;/cgi/search.pl&quot; title=&quot;Advanced search&quot;&gt;<br>                        &lt;svg viewbox=&quot;0 0 24 24&quot; class=&quot;icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;<br>                          &lt;path d=&quot;M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z&quot;/&gt;<br>                          &lt;path d=&quot;M0 0h24v24H0z&quot; fill=&quot;none&quot;/&gt;<br>                        &lt;/svg&gt;<br>                      &lt;/a&gt;<br>                    &lt;/label&gt;<br>                  &lt;/div&gt;<br>                &lt;/div&gt;<br>              &lt;/form&gt;<br>              &lt;div class=&quot;block&quot;&gt;<br>                &lt;h3 class=&quot;block_title&quot;&gt;Sign in&lt;/h3&gt;<br>                &lt;div class=&quot;block_content&quot;&gt;<br>                  &lt;p&gt;Sign-in to add or edit products.&lt;/p&gt;<br>                  &lt;form enctype=&quot;application/x-www-form-urlencoded&quot; method=&quot;post&quot; action=&quot;/cgi/session.pl&quot;&gt;<br>                    &lt;div class=&quot;row&quot;&gt;<br>                      &lt;div class=&quot;small-12 columns&quot;&gt;<br>                        &lt;label&gt;<br>Username or e-mail address:<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;                          &lt;input type=&quot;text&quot; name=&quot;user_id&quot; autocomplete=&quot;username&quot; required=&quot;required&quot;/&gt;<br>                        &lt;/label&gt;<br>                      &lt;/div&gt;<br>                      &lt;div class=&quot;small-12 columns&quot;&gt;<br>                        &lt;label&gt;<br>Password<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;                          &lt;input type=&quot;password&quot; name=&quot;password&quot; autocomplete=&quot;current-password&quot; required=&quot;required&quot;/&gt;<br>                        &lt;/label&gt;<br>                      &lt;/div&gt;<br>                      &lt;div class=&quot;small-12 columns&quot;&gt;<br>                        &lt;label&gt;<br>                          &lt;input checked=&quot;checked&quot; type=&quot;checkbox&quot; name=&quot;remember_me&quot;/&gt;<br><br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;Remember me<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;                        &lt;/label&gt;<br>                      &lt;/div&gt;<br>                    &lt;/div&gt;<br>                    &lt;input type=&quot;submit&quot; class=&quot;button small&quot; name=&quot;.submit&quot; value=&quot;Sign in&quot;/&gt;<br>                  &lt;/form&gt;<br>                  &lt;p&gt;<br>Not registered yet?<br>                    &lt;a shape=&quot;rect&quot; href=&quot;/cgi/user.pl&quot;&gt;Create your account.&lt;/a&gt;<br>                  &lt;/p&gt;<br>                &lt;/div&gt;<br>              &lt;/div&gt;<br>              &lt;div class=&quot;block&quot;&gt;<br>                &lt;h3 class=&quot;block_title&quot;&gt;Add a product&lt;/h3&gt;<br>                &lt;div class=&quot;block_content&quot;&gt;<br>                  &lt;form enctype=&quot;multipart/form-data&quot; method=&quot;post&quot; action=&quot;/cgi/product.pl&quot;&gt;<br>                    &lt;div id=&quot;imgsearchdiv_block_side&quot;&gt;<br>                      &lt;a shape=&quot;rect&quot; class=&quot;button small expand&quot; id=&quot;imgsearchbutton_block_side&quot; href=&quot;#&quot;&gt;<br>                        &lt;svg viewbox=&quot;0 0 24 24&quot; class=&quot;icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;<br>                          &lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;3.2&quot;/&gt;<br>                          &lt;path d=&quot;M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z&quot;/&gt;<br>                          &lt;path d=&quot;M0 0h24v24H0z&quot; fill=&quot;none&quot;/&gt;<br>                        &lt;/svg&gt;<br> Picture with barcode<br>                        &lt;input type=&quot;file&quot; class=&quot;img_input&quot; id=&quot;imgupload_search_block_side&quot; accept=&quot;image/*&quot; name=&quot;imgupload_search&quot; style=&quot;position: absolute;     right:0;     bottom:0;     top:0;     cursor:pointer;     opacity:0;     font-size:40px;&quot;/&gt;<br>                      &lt;/a&gt;<br>                    &lt;/div&gt;<br>                    &lt;div class=&quot;progress&quot; id=&quot;progressbar_block_side&quot; style=&quot;display:none&quot;&gt;<br>                      &lt;span class=&quot;meter&quot; id=&quot;progressmeter_block_side&quot; style=&quot;width:0%&quot;/&gt;<br>                    &lt;/div&gt;<br>                    &lt;div class=&quot;alert-box info&quot; id=&quot;imgsearchmsg_block_side&quot; data-alert=&quot;data-alert&quot; style=&quot;display:none&quot;&gt;<br><br>  Sending image<br>                        &lt;a shape=&quot;rect&quot; class=&quot;close&quot; href=&quot;#&quot;&gt;×&lt;/a&gt;<br>                    &lt;/div&gt;<br>                    &lt;div class=&quot;alert-box alert&quot; id=&quot;imgsearcherror_block_side&quot; data-alert=&quot;data-alert&quot; style=&quot;display:none&quot;&gt;<br><br>  Upload error<br>                        &lt;a shape=&quot;rect&quot; class=&quot;close&quot; href=&quot;#&quot;&gt;×&lt;/a&gt;<br>                    &lt;/div&gt;<br>                    &lt;div class=&quot;row collapse&quot;&gt;<br>                      &lt;div class=&quot;small-9 columns&quot;&gt;<br>                        &lt;input type=&quot;text&quot; name=&quot;code&quot; placeholder=&quot;or Barcode&quot;/&gt;<br>                      &lt;/div&gt;<br>                      &lt;div class=&quot;small-3 columns&quot;&gt;<br>                        &lt;input type=&quot;submit&quot; class=&quot;button postfix&quot; value=&quot;Add&quot;/&gt;<br>                      &lt;/div&gt;<br>                    &lt;/div&gt;<br>                    &lt;input type=&quot;submit&quot; class=&quot;button tiny&quot; value=&quot;Product without barcode&quot;/&gt;<br>                  &lt;/form&gt;<br>                &lt;/div&gt;<br>              &lt;/div&gt;<br>              &lt;div class=&quot;block&quot;&gt;<br>                &lt;h3 class=&quot;block_title&quot;&gt;Donate to support our work&lt;/h3&gt;<br>                &lt;div class=&quot;block_content&quot;&gt;<br>                  &lt;a shape=&quot;rect&quot; href=&quot;https://world.openfoodfacts.org/donate-to-open-food-facts&quot;&gt;<br>                    &lt;img src=&quot;https://static.openfoodfacts.org/images/svg/donate-icon.svg&quot; alt=&quot;Donate to Open Beauty Facts&quot;/&gt;<br>                  &lt;/a&gt;<br>                  &lt;p&gt;<br>Open Pet Food Facts est développé par une association à but non lucratif indépendante de l'industrie. Open Food Facts est fait pour tous, par tous, et est financé par tous. Vous pouvez soutenir notre travail en                     &lt;a shape=&quot;rect&quot; href=&quot;https://world.openfoodfacts.org/donate-to-open-food-facts&quot;&gt;donnant à Open Beauty Facts&lt;/a&gt;<br> et aussi en utilisant le                     &lt;a shape=&quot;rect&quot; href=&quot;https://www.lilo.org/fr/open-food-facts/?utm_source=open-food-facts&quot;&gt;moteur de recherche Lilo&lt;/a&gt;<br>.                    &lt;br clear=&quot;none&quot;/&gt;<br>                    &lt;b&gt;Merci beaucoup !&lt;/b&gt;<br>                  &lt;/p&gt;<br>                &lt;/div&gt;<br>              &lt;/div&gt;<br>            &lt;/div&gt;<br>          &lt;/div&gt;<br>          &lt;div class=&quot;xxlarge-11 xlarge-10 large-9 medium-8 columns&quot; id=&quot;main_column&quot; style=&quot;padding-top:1rem&quot; data-equalizer-watch=&quot;data-equalizer-watch&quot;&gt;<br>            &lt;div class=&quot;row&quot; id=&quot;donate_banner&quot;&gt;<br>              &lt;div class=&quot;small-12 large-12 xlarge-8 xxlarge-7 columns&quot;&gt;<br>                &lt;div id=&quot;image_banner&quot; style=&quot;display:none;&quot;&gt;<br>                  &lt;a shape=&quot;rect&quot; href=&quot;https://world.openfoodfacts.org/donate-to-open-food-facts?utm_source=off&amp;amp;utm_medium=web&amp;amp;utm_campaign=donate-2019&amp;amp;utm_term=personal&quot;&gt;<br>                    &lt;img src=&quot;https://static.openpetfoodfacts.org/images/banners/donate/donate-banner.personal.en.800x150.svg&quot; alt=&quot;&quot;/&gt;<br>                  &lt;/a&gt;<br>                &lt;/div&gt;<br>                &lt;div&gt;<br>                  &lt;input type=&quot;checkbox&quot; id=&quot;hide_image_banner&quot;/&gt;<br>                  &lt;label for=&quot;hide_image_banner&quot;&gt;<br>                    &lt;span id=&quot;hide_image_banner_hide&quot; style=&quot;display:none;&quot;&gt;I have already donated or I'm not interested. Hide the banner.&lt;/span&gt;<br>                    &lt;span id=&quot;hide_image_banner_show&quot; style=&quot;display:none;&quot;&gt;Hey, a box to uncheck?!&lt;/span&gt;<br>                  &lt;/label&gt;<br>                &lt;/div&gt;<br>              &lt;/div&gt;<br>            &lt;/div&gt;<br>            &lt;h1&gt;Error&lt;/h1&gt;<br>            &lt;p&gt;Invalid address.&lt;/p&gt;<br>          &lt;/div&gt;<br>        &lt;/div&gt;<br>      &lt;/div&gt;<br>    &lt;/div&gt;<br>    &lt;footer&gt;<br>      &lt;div class=&quot;small-12 medium-6 large-3 columns off&quot;&gt;<br>        &lt;div class=&quot;title&quot;&gt;Open Pet Food Facts&lt;/div&gt;<br>        &lt;p&gt;Une base de données collaborative, libre et ouverte des produits alimentaires pour animaux de compagnie du monde entier.&lt;/p&gt;<br>        &lt;ul&gt;<br>          &lt;li&gt;<br>            &lt;a shape=&quot;rect&quot; href=&quot;/legal&quot;&gt;Legal&lt;/a&gt;<br>          &lt;/li&gt;<br>          &lt;li&gt;<br>            &lt;a shape=&quot;rect&quot; href=&quot;/terms-of-use&quot;&gt;Terms of use&lt;/a&gt;<br>          &lt;/li&gt;<br>          &lt;li&gt;<br>            &lt;a shape=&quot;rect&quot; href=&quot;/data&quot;&gt;Data, API and SDKs&lt;/a&gt;<br>          &lt;/li&gt;<br>          &lt;li&gt;<br>            &lt;a shape=&quot;rect&quot; href=&quot;https://world.openfoodfacts.org/donate-to-open-food-facts&quot;&gt;Faire un don à Open Pet Food Facts&lt;/a&gt;<br>          &lt;/li&gt;<br>        &lt;/ul&gt;<br>      &lt;/div&gt;<br>      &lt;div class=&quot;small-12 medium-6 large-3 columns app&quot;&gt;<br>        &lt;div class=&quot;title&quot;&gt;Install the app&lt;/div&gt;<br>        &lt;a shape=&quot;rect&quot; href=&quot;https://apps.apple.com/fr/app/open-beauty-facts/id1122926380&quot;&gt;<br>          &lt;img src=&quot;https://static.openpetfoodfacts.org/images/misc/appstore/black/appstore_US.svg&quot; alt=&quot;Download on the App Store&quot; width=&quot;120&quot; height=&quot;40&quot; loading=&quot;lazy&quot;/&gt;<br>        &lt;/a&gt;<br>        &lt;a shape=&quot;rect&quot; href=&quot;https://play.google.com/store/apps/details?id=org.openpetfoodfacts.scanner&amp;amp;hl=en&quot;&gt;<br>          &lt;img src=&quot;https://static.openpetfoodfacts.org/images/misc/google-play-badge-svg-master/img/en_get.svg&quot; alt=&quot;Get It On Google Play&quot; width=&quot;102&quot; height=&quot;40&quot; loading=&quot;lazy&quot;/&gt;<br>        &lt;/a&gt;<br>        &lt;a shape=&quot;rect&quot; href=&quot;https://www.microsoft.com/fr-fr/p/openfoodfacts/9nblggh0dkqr&quot;&gt;<br>          &lt;img src=&quot;https://static.openpetfoodfacts.org/images/misc/microsoft/English.svg&quot; alt=&quot;Get it from Microsoft&quot; width=&quot;109&quot; height=&quot;40&quot; loading=&quot;lazy&quot;/&gt;<br>        &lt;/a&gt;<br>        &lt;a shape=&quot;rect&quot; href=&quot;https://fr.openfoodfacts.org/images/apps/off.apk&quot;&gt;<br>          &lt;img src=&quot;https://static.openpetfoodfacts.org/images/misc/android-apk.svg&quot; alt=&quot;Android APK&quot; loading=&quot;lazy&quot;/&gt;<br>        &lt;/a&gt;<br>      &lt;/div&gt;<br>      &lt;div class=&quot;small-12 medium-6 large-3 columns project&quot;&gt;<br>        &lt;div class=&quot;title&quot;&gt;Discover the project&lt;/div&gt;<br>        &lt;ul&gt;<br>          &lt;li&gt;<br>            &lt;a shape=&quot;rect&quot; href=&quot;/who-we-are&quot;&gt;Who we are&lt;/a&gt;<br>          &lt;/li&gt;<br>          &lt;li&gt;<br>            &lt;a shape=&quot;rect&quot; href=&quot;/faq&quot;&gt;Frequently asked questions&lt;/a&gt;<br>          &lt;/li&gt;<br>          &lt;li&gt;<br>            &lt;a shape=&quot;rect&quot; href=&quot;https://en.blog.openfoodfacts.org&quot;&gt;Open Pet Food Facts blog&lt;/a&gt;<br>          &lt;/li&gt;<br>          &lt;li&gt;<br>            &lt;a shape=&quot;rect&quot; href=&quot;/press&quot;&gt;Press&lt;/a&gt;<br>          &lt;/li&gt;<br>          &lt;li&gt;<br>            &lt;a shape=&quot;rect&quot; href=&quot;https://fr.wiki.openfoodfacts.org&quot;&gt;Open Pet Food Facts wiki (en)&lt;/a&gt;<br>          &lt;/li&gt;<br>          &lt;li&gt;<br>            &lt;a shape=&quot;rect&quot; href=&quot;/cgi/top_translators.pl&quot;&gt;Translators&lt;/a&gt;<br>          &lt;/li&gt;<br>          &lt;li&gt;<br>            &lt;a shape=&quot;rect&quot; href=&quot;/partners&quot;&gt;Partners&lt;/a&gt;<br>          &lt;/li&gt;<br>          &lt;li&gt;<br>            &lt;a shape=&quot;rect&quot; href=&quot;https://world-fr.openbeautyfacts.org&quot;&gt;Open Beauty Facts - Cosmétiques&lt;/a&gt;<br>          &lt;/li&gt;<br>        &lt;/ul&gt;<br>      &lt;/div&gt;<br>      &lt;div class=&quot;small-12 medium-6 large-3 columns community&quot;&gt;<br>        &lt;div class=&quot;title&quot;&gt;Join the community&lt;/div&gt;<br>        &lt;p&gt;<br>          &lt;a shape=&quot;rect&quot; href=&quot;/code-of-conduct&quot;&gt;Code of conduct&lt;/a&gt;<br>          &lt;br clear=&quot;none&quot;/&gt;<br>          &lt;br clear=&quot;none&quot;/&gt;<br><br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;Join us on           &lt;a shape=&quot;rect&quot; href=&quot;https://slack.openfoodfacts.org&quot;&gt;Slack&lt;/a&gt;<br>:<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;          &lt;br clear=&quot;none&quot;/&gt;<br><br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;et le           &lt;a shape=&quot;rect&quot; href=&quot;https://www.facebook.com/groups/OpenFoodFacts/&quot;&gt;groupe Facebook des contributeurs&lt;/a&gt;<br><br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;Follow us on           &lt;a shape=&quot;rect&quot; href=&quot;https://twitter.com/openfoodfacts&quot;&gt;Twitter&lt;/a&gt;<br>,<br>          &lt;a shape=&quot;rect&quot; href=&quot;https://www.facebook.com/OpenFoodFacts&quot;&gt;Facebook&lt;/a&gt;<br> and<br>          &lt;a shape=&quot;rect&quot; href=&quot;https://www.instagram.com/open.food.facts/&quot;&gt;Instagram&lt;/a&gt;<br>        &lt;/p&gt;<br>      &lt;/div&gt;<br>    &lt;/footer&gt;<br>    &lt;div id=&quot;fb-root&quot;/&gt;<br>    &lt;script src=&quot;https://static.openpetfoodfacts.org/js/dist/modernizr.js&quot;/&gt;<br>    &lt;script src=&quot;https://static.openpetfoodfacts.org/js/dist/jquery.js&quot;/&gt;<br>    &lt;script src=&quot;https://static.openpetfoodfacts.org/js/dist/jquery-ui.js&quot;/&gt;<br>    &lt;script src=&quot;https://static.openpetfoodfacts.org/js/dist/display.js&quot;/&gt;<br>    &lt;script&gt;<br>$(function() {<br><br>// start off canvas blocks for small screens<br><br>    $('#imgupload_search_block_side').fileupload({<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;sequentialUploads: true,<br>        dataType: 'json',<br>        url: '/cgi/product.pl',<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;formData : [{name: 'jqueryfileupload', value: 1}],<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;resizeMaxWidth : 2000,<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;resizeMaxHeight : 2000,<br>        done: function (e, data) {<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;if (data.result.location) {<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$(location).attr('href',data.result.location);<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;}<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;if (data.result.error) {<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#imgsearcherror_block_side&quot;).html(data.result.error);<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#imgsearcherror_block_side&quot;).show();<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;}<br>        },<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;fail : function (e, data) {<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#imgsearcherror_block_side&quot;).show();<br>        },<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;always : function (e, data) {<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#progressbar_block_side&quot;).hide();<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#imgsearchbutton_block_side&quot;).show();<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#imgsearchmsg_block_side&quot;).hide();<br>        },<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;start: function (e, data) {<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#imgsearchbutton_block_side&quot;).hide();<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#imgsearcherror_block_side&quot;).hide();<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#imgsearchmsg_block_side&quot;).show();<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#progressbar_block_side&quot;).show();<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#progressmeter_block_side&quot;).css('width', &quot;0%&quot;);<br><br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;},<br>            sent: function (e, data) {<br>                if (data.dataType &amp;amp;&amp;amp;<br>                        data.dataType.substr(0, 6) === 'iframe') {<br>                    // Iframe Transport does not support progress events.<br>                    // In lack of an indeterminate progress bar, we set<br>                    // the progress to 100%, showing the full animated bar:<br>                    $(&quot;#progressmeter_block_side&quot;).css('width', &quot;100%&quot;);<br>                }<br>            },<br>            progress: function (e, data) {<br><br>                   $(&quot;#progressmeter_block_side&quot;).css('width', parseInt(data.loaded / data.total * 100, 10) + &quot;%&quot;);<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#imgsearchdebug_block_side&quot;).html(data.loaded + ' / ' + data.total);<br><br>            }<br><br>    });<br><br>// end off canvas blocks for small screens<br><br><br>if ($.cookie('hide_image_banner') == '1') {<br>&nbsp; &nbsp; &nbsp; &nbsp;$('#hide_image_banner').prop('checked',true);<br>&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#image_banner&quot;).hide();<br>&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#hide_image_banner_hide&quot;).hide();<br>&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#hide_image_banner_show&quot;).show();<br>}<br>else {<br>&nbsp; &nbsp; &nbsp; &nbsp;$('#hide_image_banner').prop('checked',false);<br>&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#image_banner&quot;).show();<br>&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#hide_image_banner_hide&quot;).show();<br>&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#hide_image_banner_show&quot;).hide();<br>}<br><br>$(&quot;#hide_image_banner&quot;).change(function () {<br>&nbsp; &nbsp; &nbsp; &nbsp;if ($('#hide_image_banner').prop('checked')) {<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$.cookie('hide_image_banner', '1', { expires: 180, path: '/' });<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#image_banner&quot;).hide();<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#hide_image_banner_hide&quot;).hide();<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#hide_image_banner_show&quot;).show();<br>&nbsp; &nbsp; &nbsp; &nbsp;}<br>&nbsp; &nbsp; &nbsp; &nbsp;else {<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$.cookie('hide_image_banner', null, { path: '/'});<br><br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#image_banner&quot;).show();<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#hide_image_banner_hide&quot;).show();<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$(&quot;#hide_image_banner_show&quot;).hide();<br>&nbsp; &nbsp; &nbsp; &nbsp;}<br>}<br>);<br><br><br>});<br>&lt;/script&gt;<br>    &lt;script src=&quot;https://static.openpetfoodfacts.org/js/dist/foundation.js&quot;/&gt;<br>    &lt;script src=&quot;https://static.openpetfoodfacts.org/js/dist/jquery.cookie.js&quot;/&gt;<br>    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js&quot; integrity=&quot;sha256-d/edyIFneUo3SvmaFnf96hRcVBcyaOy96iMkPez1kaU=&quot; crossorigin=&quot;anonymous&quot;/&gt;<br>    &lt;script type=&quot;text/javascript&quot; src=&quot;https://static.openpetfoodfacts.org/js/dist/jquery.iframe-transport.js&quot;/&gt;<br>    &lt;script type=&quot;text/javascript&quot; src=&quot;https://static.openpetfoodfacts.org/js/dist/jquery.fileupload.js&quot;/&gt;<br>    &lt;script type=&quot;text/javascript&quot; src=&quot;https://static.openpetfoodfacts.org/js/dist/load-image.all.min.js&quot;/&gt;<br>    &lt;script type=&quot;text/javascript&quot; src=&quot;https://static.openpetfoodfacts.org/js/dist/canvas-to-blob.js&quot;/&gt;<br>    &lt;script&gt;<br>$(document).foundation({<br>&nbsp; &nbsp; &nbsp; &nbsp;equalizer : {<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;equalize_on_stack: true<br>&nbsp; &nbsp; &nbsp; &nbsp;},<br>&nbsp; &nbsp; &nbsp; &nbsp;accordion: {<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;callback : function (accordion) {<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;$(document).foundation('equalizer', 'reflow');<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;}<br>&nbsp; &nbsp; &nbsp; &nbsp;}<br>});<br>&lt;/script&gt;<br>    &lt;script type=&quot;application/ld+json&quot;&gt;<br>{<br>&nbsp; &nbsp; &nbsp; &nbsp;&quot;@context&quot; : &quot;https://schema.org&quot;,<br>&nbsp; &nbsp; &nbsp; &nbsp;&quot;@type&quot; : &quot;WebSite&quot;,<br>&nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot; : &quot;Open Pet Food Facts&quot;,<br>&nbsp; &nbsp; &nbsp; &nbsp;&quot;url&quot; : &quot;https://world.openpetfoodfacts.org&quot;,<br>&nbsp; &nbsp; &nbsp; &nbsp;&quot;potentialAction&quot;: {<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&quot;@type&quot;: &quot;SearchAction&quot;,<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&quot;target&quot;: &quot;https://world.openpetfoodfacts.org/cgi/search.pl?search_terms=?{search_term_string}&quot;,<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&quot;query-input&quot;: &quot;required name=search_term_string&quot;<br>&nbsp; &nbsp; &nbsp; &nbsp;}<br>}<br>{<br>&nbsp; &nbsp; &nbsp; &nbsp;&quot;@context&quot;: &quot;https://schema.org/&quot;,<br>&nbsp; &nbsp; &nbsp; &nbsp;&quot;@type&quot;: &quot;Organization&quot;,<br>&nbsp; &nbsp; &nbsp; &nbsp;&quot;url&quot;: &quot;https://world.openpetfoodfacts.org&quot;,<br>&nbsp; &nbsp; &nbsp; &nbsp;&quot;logo&quot;: &quot;https://static.openpetfoodfacts.org/images/misc/openfoodfacts-logo-en-178x150.png&quot;,<br>&nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;Open Pet Food Facts&quot;,<br>&nbsp; &nbsp; &nbsp; &nbsp;&quot;sameAs&quot; : [ &quot;https://www.facebook.com/OpenPetFoodFacts.fr&quot;, &quot;https://twitter.com/OpenFoodFactsFr&quot;]<br>}<br>&lt;/script&gt;<br>  &lt;/body&gt;<br>&lt;/html&gt;</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        </span>
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="50" class="step-icon">
+                            <a name="2"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection2 success-icon"
+                                       style="margin-left: 20px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
+                                   style="display:block;">
+                                    <span class="top-level-step">
+                                                Entonces valido que el codigo de respuesta sea "404"
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                        <td width="100"><span class="top-level-step">0s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection2" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="2-0"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                Validando que el codigo de respuesta sea el esperado...
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="50" class="step-icon">
+                            <a name="3"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection3')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection3 success-icon"
+                                       style="margin-left: 20px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection3')"
+                                   style="display:block;">
+                                    <span class="top-level-step">
+                                                Y guardo la respuesta de la ejecucion del servicio
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                        <td width="100"><span class="top-level-step">0.03s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection3" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="3-0"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                Guardando la respuesta de la ejecución del servicio...
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0.03s</span></td>
+                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                <tr class="test-SUCCESS">
+                        <td colspan="2"></td>
+                    <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>2.03s</em></span></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+    <div id="beforefooter"></div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <span class="version">Serenity BDD version 2.1.7</span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function toggleDiv(divId) {
+            $("#" + divId).toggle();
+            var imgsrc = $(".img" + divId).attr('src');
+            if (imgsrc == 'images/plus.png') {
+                $(".img" + divId).attr("src", function () {
+                    return "images/minus.png";
+                });
+
+            } else {
+                $(".img" + divId).attr("src", function () {
+                    return "images/plus.png";
+                });
+            }
+        }
+    </script>
+
+
+    <script type="text/javascript">
+        //<![CDATA[
+
+        $(document).ready(function () {
+            $('img.screenshot').imgPreview({
+                imgCSS: {
+                    width: '500px'
+                },
+                distanceFromCursor: {top: 10, left: -200}
+            });
+        });
+
+        //]]>
+    </script>
+    <div id="imgPreviewContainer" style="position: absolute; top: 612px; left: 355px; display: none; " class=""><img
+                src="" style="display: none; "></div>
+    <div id="imgPreviewContainer2" style="position: absolute; top: 925px; left: 320px; display: none; " class="">
+        <img style="width: 200px; display: none; " src=""></div>
+    <div id="imgPreviewWithStyles" style="position: absolute; top: 1272px; left: 321px; display: none; " class="">
+        <img style="height: 200px; opacity: 1; display: none; " src=""></div>
+    <div id="imgPreviewWithStyles2" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+    <div id="imgPreviewWithStyles3" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+
+</div>
+</body>
+</html>

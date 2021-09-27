@@ -1,0 +1,662 @@
+<html class="no-js" lang="en" data-serverdomain="openpetfoodfacts.org">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Error</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="fb:app_id" content="219331381518041"/>
+    <meta property="og:type" content="food"/>
+    <meta property="og:title" content=""/>
+    <meta property="og:url" content="https://world.openpetfoodfacts.org"/>
+    <meta property="og:image" content="https://static.openpetfoodfacts.org/images/misc/openpetfoodfacts-logo-en.png&amp;hl=fr"/>
+    <meta property="og:description" content="Ingrédients, composition nutritionnelle et information sur les produits alimentaires pour animaux de compagnie du monde entier dans une base de données libre et ouverte"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://static.openpetfoodfacts.org/images/favicon/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="https://static.openpetfoodfacts.org/images/favicon/apple-touch-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="https://static.openpetfoodfacts.org/images/favicon/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="https://static.openpetfoodfacts.org/images/favicon/apple-touch-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="https://static.openpetfoodfacts.org/images/favicon/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="https://static.openpetfoodfacts.org/images/favicon/apple-touch-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="https://static.openpetfoodfacts.org/images/favicon/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="https://static.openpetfoodfacts.org/images/favicon/apple-touch-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://static.openpetfoodfacts.org/images/favicon/apple-touch-icon-180x180.png"/>
+    <link rel="icon" type="image/png" href="https://static.openpetfoodfacts.org/images/favicon/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="https://static.openpetfoodfacts.org/images/favicon/android-chrome-192x192.png" sizes="192x192"/>
+    <link rel="icon" type="image/png" href="https://static.openpetfoodfacts.org/images/favicon/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/png" href="https://static.openpetfoodfacts.org/images/favicon/favicon-16x16.png" sizes="16x16"/>
+    <link rel="manifest" href="/cgi/manifest.pl"/>
+    <link rel="mask-icon" href="https://static.openpetfoodfacts.org/images/favicon/safari-pinned-tab.svg" color="#5bbad5"/>
+    <link rel="shortcut icon" href="https://static.openpetfoodfacts.org/images/favicon/favicon.ico"/>
+    <meta name="msapplication-TileColor" content="#da532c"/>
+    <meta name="msapplication-TileImage" content="https://static.openpetfoodfacts.org/images/favicon/mstile-144x144.png"/>
+    <meta name="msapplication-config" content="https://static.openpetfoodfacts.org/images/favicon/browserconfig.xml"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <link rel="canonical" href="https://world.openpetfoodfacts.org"/>
+    <link rel="stylesheet" href="https://static.openpetfoodfacts.org/css/dist/app.css?v=1590858299"/>
+    <link rel="stylesheet" href="https://static.openpetfoodfacts.org/css/dist/jqueryui/themes/base/jquery-ui.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" integrity="sha256-FdatTf20PQr/rWg+cAKfl6j4/IY3oohFAJ7gVC3M34E=" crossorigin="anonymous"/>
+    <link rel="search" href="https://world.openpetfoodfacts.org/cgi/opensearch.pl" type="application/opensearchdescription+xml" title="Open Pet Food Facts"/>
+    <style media="all">
+.show-when-logged-in {display:none}
+
+</style>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-31851927-13"/>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-31851927-13');
+</script>
+  </head>
+  <body>
+    <nav class="top-bar" data-topbar="data-topbar" id="top-bar">
+      <ul class="title-area">
+        <li class="name">
+          <h2>
+            <a shape="rect" href="/" style="font-size:1rem;">Open Pet Food Facts</a>
+          </h2>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a shape="rect" href="#">
+            <span>Menu</span>
+          </a>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <label for="select_country" style="display:none">Country</label>
+        <ul class="left">
+          <li class="has-form has-dropdown" id="select_country_li">
+            <select id="select_country" style="width:100%" data-placeholder="Country">
+              <option/>
+            </select>
+          </li>
+        </ul>
+        <ul class="right">
+          <li class="show-for-large-up">
+            <form enctype="application/x-www-form-urlencoded" method="get" action="/cgi/search.pl">
+              <div class="row collapse">
+                <div class="small-8 columns">
+                  <input type="text" placeholder="Search for a product" name="search_terms" value=""/>
+                  <input type="hidden" name="search_simple" value="1"/>
+                  <input type="hidden" name="action" value="process"/>
+                </div>
+                <div class="small-4 columns">
+                  <button type="submit" title="Search">
+                    <svg viewbox="0 0 24 24" class="icon" aria-hidden="true" focusable="false">
+                      <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                      <path d="M0 0h24v24H0z" fill="none"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </li>
+          <li class="show-for-large-only">
+            <a shape="rect" href="/cgi/search.pl" title="Advanced search">
+              <svg viewbox="0 0 24 24" class="icon" aria-hidden="true" focusable="false">
+                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                <path d="M0 0h24v24H0z" fill="none"/>
+              </svg>
+            </a>
+          </li>
+          <li class="show-for-xlarge-up">
+            <a shape="rect" href="/cgi/search.pl">
+              <svg viewbox="0 0 24 24" class="icon" aria-hidden="true" focusable="false">
+                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                <path d="M0 0h24v24H0z" fill="none"/>
+              </svg>
+ Advanced search            </a>
+          </li>
+          <li class="show-for-large-only">
+            <a shape="rect" href="/cgi/search.pl?graph=1" title="Graphs and maps">
+              <svg viewbox="0 0 24 24" class="icon" aria-hidden="true" focusable="false">
+                <path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z"/>
+                <path fill="none" d="M0 0h24v24H0z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="show-for-xlarge-up">
+            <a shape="rect" href="/cgi/search.pl?graph=1">
+              <svg viewbox="0 0 24 24" class="icon" aria-hidden="true" focusable="false">
+                <path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z"/>
+                <path fill="none" d="M0 0h24v24H0z"/>
+              </svg>
+ Graphs and maps            </a>
+          </li>
+          <li class="show-for-large-up divider"/>
+          <li>
+            <a shape="rect" href="/discover">Discover</a>
+          </li>
+          <li>
+            <a shape="rect" href="/contribute">Contribute</a>
+          </li>
+          <li class="show-for-large">
+            <a shape="rect" class="button success" href="/open-pet-food-facts-mobile-app" title="Get the app">
+              <svg viewbox="0 0 24 24" class="icon" aria-hidden="true" focusable="false">
+                <path d="M16 1H8C6.34 1 5 2.34 5 4v16c0 1.66 1.34 3 3 3h8c1.66 0 3-1.34 3-3V4c0-1.66-1.34-3-3-3zm-2 20h-4v-1h4v1zm3.25-3H6.75V4h10.5v14z"/>
+                <path d="M0 0h24v24H0z" fill="none"/>
+              </svg>
+            </a>
+          </li>
+          <li class="show-for-xlarge-up">
+            <a shape="rect" class="button success" href="/open-pet-food-facts-mobile-app">
+              <svg viewbox="0 0 24 24" class="icon" aria-hidden="true" focusable="false">
+                <path d="M16 1H8C6.34 1 5 2.34 5 4v16c0 1.66 1.34 3 3 3h8c1.66 0 3-1.34 3-3V4c0-1.66-1.34-3-3-3zm-2 20h-4v-1h4v1zm3.25-3H6.75V4h10.5v14z"/>
+                <path d="M0 0h24v24H0z" fill="none"/>
+              </svg>
+ Get the app            </a>
+          </li>
+        </ul>
+      </section>
+    </nav>
+    <nav class="tab-bar show-for-small-only">
+      <div class="left-small" style="padding-top:4px;">
+        <a shape="rect" class="left-off-canvas-toggle button postfix anonymous" href="#idOfLeftMenu" role="button" aria-controls="idOfLeftMenu" aria-expanded="false">
+          <svg viewbox="0 0 24 24" class="icon" aria-hidden="true" focusable="false">
+            <path d="M3 5v14a2 2 0 002 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5a2 2 0 00-2 2zm12 4c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </a>
+      </div>
+      <div class="middle tab-bar-section" style="padding-top:4px;">
+        <form enctype="application/x-www-form-urlencoded" method="get" action="/cgi/search.pl">
+          <div class="row collapse">
+            <div class="small-8 columns">
+              <input type="text" placeholder="Search for a product" name="search_terms"/>
+              <input type="hidden" name="search_simple" value="1"/>
+              <input type="hidden" name="action" value="process"/>
+            </div>
+            <div class="small-2 columns">
+              <button type="submit" class="button postfix">
+                <svg viewbox="0 0 24 24" class="icon" aria-hidden="true" focusable="false">
+                  <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                  <path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+              </button>
+            </div>
+            <div class="small-2 columns">
+              <a shape="rect" href="/cgi/search.pl" title="Advanced search">
+                <svg viewbox="0 0 24 24" class="icon" aria-hidden="true" focusable="false">
+                  <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                  <path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+                <svg viewbox="0 0 24 24" class="icon" aria-hidden="true" focusable="false">
+                  <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                  <path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </nav>
+    <div class="off-canvas-wrap" data-offcanvas="data-offcanvas">
+      <div class="inner-wrap">
+        <aside class="left-off-canvas-menu">
+          <div id="aside_column">
+            <div class="block">
+              <h3 class="block_title">Sign in</h3>
+              <div class="block_content">
+                <p>Sign-in to add or edit products.</p>
+                <form enctype="application/x-www-form-urlencoded" method="post" action="/cgi/session.pl">
+                  <div class="row">
+                    <div class="small-12 columns">
+                      <label>
+Username or e-mail address:
+				                        <input type="text" name="user_id" autocomplete="username" required="required"/>
+                      </label>
+                    </div>
+                    <div class="small-12 columns">
+                      <label>
+Password
+				                        <input type="password" name="password" autocomplete="current-password" required="required"/>
+                      </label>
+                    </div>
+                    <div class="small-12 columns">
+                      <label>
+                        <input checked="checked" type="checkbox" name="remember_me"/>
+
+				Remember me
+			                      </label>
+                    </div>
+                  </div>
+                  <input type="submit" class="button small" name=".submit" value="Sign in"/>
+                </form>
+                <p>
+Not registered yet?
+                  <a shape="rect" href="/cgi/user.pl">Create your account.</a>
+                </p>
+              </div>
+            </div>
+            <div class="block">
+              <h3 class="block_title">Add a product</h3>
+              <div class="block_content">
+                <form enctype="multipart/form-data" method="post" action="/cgi/product.pl">
+                  <div id="imgsearchdiv_block_aside">
+                    <a shape="rect" class="button small expand" id="imgsearchbutton_block_aside" href="#">
+                      <svg viewbox="0 0 24 24" class="icon" aria-hidden="true" focusable="false">
+                        <circle cx="12" cy="12" r="3.2"/>
+                        <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                      </svg>
+ Picture with barcode
+                      <input type="file" class="img_input" id="imgupload_search_block_aside" accept="image/*" name="imgupload_search" style="position: absolute;     right:0;     bottom:0;     top:0;     cursor:pointer;     opacity:0;     font-size:40px;"/>
+                    </a>
+                  </div>
+                  <div class="progress" id="progressbar_block_aside" style="display:none">
+                    <span class="meter" id="progressmeter_block_aside" style="width:0%"/>
+                  </div>
+                  <div class="alert-box info" id="imgsearchmsg_block_aside" data-alert="data-alert" style="display:none">
+
+  Sending image
+                      <a shape="rect" class="close" href="#">×</a>
+                  </div>
+                  <div class="alert-box alert" id="imgsearcherror_block_aside" data-alert="data-alert" style="display:none">
+
+  Upload error
+                      <a shape="rect" class="close" href="#">×</a>
+                  </div>
+                  <div class="row collapse">
+                    <div class="small-9 columns">
+                      <input type="text" name="code" placeholder="or Barcode"/>
+                    </div>
+                    <div class="small-3 columns">
+                      <input type="submit" class="button postfix" value="Add"/>
+                    </div>
+                  </div>
+                  <input type="submit" class="button tiny" value="Product without barcode"/>
+                </form>
+              </div>
+            </div>
+            <div class="block">
+              <h3 class="block_title">Donate to support our work</h3>
+              <div class="block_content">
+                <a shape="rect" href="https://world.openfoodfacts.org/donate-to-open-food-facts">
+                  <img src="https://static.openfoodfacts.org/images/svg/donate-icon.svg" alt="Donate to Open Beauty Facts"/>
+                </a>
+                <p>
+Open Pet Food Facts est développé par une association à but non lucratif indépendante de l'industrie. Open Food Facts est fait pour tous, par tous, et est financé par tous. Vous pouvez soutenir notre travail en                   <a shape="rect" href="https://world.openfoodfacts.org/donate-to-open-food-facts">donnant à Open Beauty Facts</a>
+ et aussi en utilisant le                   <a shape="rect" href="https://www.lilo.org/fr/open-food-facts/?utm_source=open-food-facts">moteur de recherche Lilo</a>
+.                  <br clear="none"/>
+                  <b>Merci beaucoup !</b>
+                </p>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <a shape="rect" class="exit-off-canvas"/>
+        <div class="row full-width" style="max-width: 100% !important;" data-equalizer="data-equalizer">
+          <div class="xxlarge-1 xlarge-2 large-3 medium-4 columns hide-for-small" style="background-color:#fafafa;padding-top:1rem;" data-equalizer-watch="data-equalizer-watch">
+            <div class="sidebar">
+              <div style="text-align:center">
+                <a shape="rect" href="/">
+                  <img id="logo" src="https://static.openpetfoodfacts.org/images/misc/openfoodfacts-logo-en-178x150.png" srcset="https://static.openpetfoodfacts.org/images/misc/openfoodfacts-logo-en-356x300.png 2x" width="178" height="150" alt="Open Pet Food Facts" style="margin-bottom:0.5rem"/>
+                </a>
+              </div>
+              <p>
+Open Pet Food Facts rassemble des informations et des données sur les produits alimentaires pour animaux de compagnie du monde entier.                <br clear="none"/>
+              </p>
+              <div class="flex-video">
+                <embed width="640" height="480" src="https://static.openpetfoodfacts.org/images/misc/opff-leaderboard.svg"/>
+              </div>
+              <form enctype="application/x-www-form-urlencoded" method="get" class="hide-for-large-up" action="/cgi/search.pl">
+                <div class="row collapse">
+                  <div class="small-9 columns">
+                    <input type="text" placeholder="Search for a product" name="search_terms"/>
+                    <input type="hidden" name="search_simple" value="1"/>
+                    <input type="hidden" name="action" value="process"/>
+                  </div>
+                  <div class="small-2 columns">
+                    <button type="submit" class="button postfix">
+                      <svg viewbox="0 0 24 24" class="icon" aria-hidden="true" focusable="false">
+                        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="small-1 columns">
+                    <label class="right inline">
+                      <a shape="rect" href="/cgi/search.pl" title="Advanced search">
+                        <svg viewbox="0 0 24 24" class="icon" aria-hidden="true" focusable="false">
+                          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                          <path d="M0 0h24v24H0z" fill="none"/>
+                        </svg>
+                      </a>
+                    </label>
+                  </div>
+                </div>
+              </form>
+              <div class="block">
+                <h3 class="block_title">Sign in</h3>
+                <div class="block_content">
+                  <p>Sign-in to add or edit products.</p>
+                  <form enctype="application/x-www-form-urlencoded" method="post" action="/cgi/session.pl">
+                    <div class="row">
+                      <div class="small-12 columns">
+                        <label>
+Username or e-mail address:
+				                          <input type="text" name="user_id" autocomplete="username" required="required"/>
+                        </label>
+                      </div>
+                      <div class="small-12 columns">
+                        <label>
+Password
+				                          <input type="password" name="password" autocomplete="current-password" required="required"/>
+                        </label>
+                      </div>
+                      <div class="small-12 columns">
+                        <label>
+                          <input checked="checked" type="checkbox" name="remember_me"/>
+
+				Remember me
+			                        </label>
+                      </div>
+                    </div>
+                    <input type="submit" class="button small" name=".submit" value="Sign in"/>
+                  </form>
+                  <p>
+Not registered yet?
+                    <a shape="rect" href="/cgi/user.pl">Create your account.</a>
+                  </p>
+                </div>
+              </div>
+              <div class="block">
+                <h3 class="block_title">Add a product</h3>
+                <div class="block_content">
+                  <form enctype="multipart/form-data" method="post" action="/cgi/product.pl">
+                    <div id="imgsearchdiv_block_side">
+                      <a shape="rect" class="button small expand" id="imgsearchbutton_block_side" href="#">
+                        <svg viewbox="0 0 24 24" class="icon" aria-hidden="true" focusable="false">
+                          <circle cx="12" cy="12" r="3.2"/>
+                          <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
+                          <path d="M0 0h24v24H0z" fill="none"/>
+                        </svg>
+ Picture with barcode
+                        <input type="file" class="img_input" id="imgupload_search_block_side" accept="image/*" name="imgupload_search" style="position: absolute;     right:0;     bottom:0;     top:0;     cursor:pointer;     opacity:0;     font-size:40px;"/>
+                      </a>
+                    </div>
+                    <div class="progress" id="progressbar_block_side" style="display:none">
+                      <span class="meter" id="progressmeter_block_side" style="width:0%"/>
+                    </div>
+                    <div class="alert-box info" id="imgsearchmsg_block_side" data-alert="data-alert" style="display:none">
+
+  Sending image
+                        <a shape="rect" class="close" href="#">×</a>
+                    </div>
+                    <div class="alert-box alert" id="imgsearcherror_block_side" data-alert="data-alert" style="display:none">
+
+  Upload error
+                        <a shape="rect" class="close" href="#">×</a>
+                    </div>
+                    <div class="row collapse">
+                      <div class="small-9 columns">
+                        <input type="text" name="code" placeholder="or Barcode"/>
+                      </div>
+                      <div class="small-3 columns">
+                        <input type="submit" class="button postfix" value="Add"/>
+                      </div>
+                    </div>
+                    <input type="submit" class="button tiny" value="Product without barcode"/>
+                  </form>
+                </div>
+              </div>
+              <div class="block">
+                <h3 class="block_title">Donate to support our work</h3>
+                <div class="block_content">
+                  <a shape="rect" href="https://world.openfoodfacts.org/donate-to-open-food-facts">
+                    <img src="https://static.openfoodfacts.org/images/svg/donate-icon.svg" alt="Donate to Open Beauty Facts"/>
+                  </a>
+                  <p>
+Open Pet Food Facts est développé par une association à but non lucratif indépendante de l'industrie. Open Food Facts est fait pour tous, par tous, et est financé par tous. Vous pouvez soutenir notre travail en                     <a shape="rect" href="https://world.openfoodfacts.org/donate-to-open-food-facts">donnant à Open Beauty Facts</a>
+ et aussi en utilisant le                     <a shape="rect" href="https://www.lilo.org/fr/open-food-facts/?utm_source=open-food-facts">moteur de recherche Lilo</a>
+.                    <br clear="none"/>
+                    <b>Merci beaucoup !</b>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="xxlarge-11 xlarge-10 large-9 medium-8 columns" id="main_column" style="padding-top:1rem" data-equalizer-watch="data-equalizer-watch">
+            <div class="row" id="donate_banner">
+              <div class="small-12 large-12 xlarge-8 xxlarge-7 columns">
+                <div id="image_banner" style="display:none;">
+                  <a shape="rect" href="https://world.openfoodfacts.org/donate-to-open-food-facts?utm_source=off&amp;utm_medium=web&amp;utm_campaign=donate-2019&amp;utm_term=research">
+                    <img src="https://static.openpetfoodfacts.org/images/banners/donate/donate-banner.research.en.800x150.svg" alt=""/>
+                  </a>
+                </div>
+                <div>
+                  <input type="checkbox" id="hide_image_banner"/>
+                  <label for="hide_image_banner">
+                    <span id="hide_image_banner_hide" style="display:none;">I have already donated or I'm not interested. Hide the banner.</span>
+                    <span id="hide_image_banner_show" style="display:none;">Hey, a box to uncheck?!</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <h1>Error</h1>
+            <p>Invalid address.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="small-12 medium-6 large-3 columns off">
+        <div class="title">Open Pet Food Facts</div>
+        <p>Une base de données collaborative, libre et ouverte des produits alimentaires pour animaux de compagnie du monde entier.</p>
+        <ul>
+          <li>
+            <a shape="rect" href="/legal">Legal</a>
+          </li>
+          <li>
+            <a shape="rect" href="/terms-of-use">Terms of use</a>
+          </li>
+          <li>
+            <a shape="rect" href="/data">Data, API and SDKs</a>
+          </li>
+          <li>
+            <a shape="rect" href="https://world.openfoodfacts.org/donate-to-open-food-facts">Faire un don à Open Pet Food Facts</a>
+          </li>
+        </ul>
+      </div>
+      <div class="small-12 medium-6 large-3 columns app">
+        <div class="title">Install the app</div>
+        <a shape="rect" href="https://apps.apple.com/fr/app/open-beauty-facts/id1122926380">
+          <img src="https://static.openpetfoodfacts.org/images/misc/appstore/black/appstore_US.svg" alt="Download on the App Store" width="120" height="40" loading="lazy"/>
+        </a>
+        <a shape="rect" href="https://play.google.com/store/apps/details?id=org.openpetfoodfacts.scanner&amp;hl=en">
+          <img src="https://static.openpetfoodfacts.org/images/misc/google-play-badge-svg-master/img/en_get.svg" alt="Get It On Google Play" width="102" height="40" loading="lazy"/>
+        </a>
+        <a shape="rect" href="https://www.microsoft.com/fr-fr/p/openfoodfacts/9nblggh0dkqr">
+          <img src="https://static.openpetfoodfacts.org/images/misc/microsoft/English.svg" alt="Get it from Microsoft" width="109" height="40" loading="lazy"/>
+        </a>
+        <a shape="rect" href="https://fr.openfoodfacts.org/images/apps/off.apk">
+          <img src="https://static.openpetfoodfacts.org/images/misc/android-apk.svg" alt="Android APK" loading="lazy"/>
+        </a>
+      </div>
+      <div class="small-12 medium-6 large-3 columns project">
+        <div class="title">Discover the project</div>
+        <ul>
+          <li>
+            <a shape="rect" href="/who-we-are">Who we are</a>
+          </li>
+          <li>
+            <a shape="rect" href="/faq">Frequently asked questions</a>
+          </li>
+          <li>
+            <a shape="rect" href="https://en.blog.openfoodfacts.org">Open Pet Food Facts blog</a>
+          </li>
+          <li>
+            <a shape="rect" href="/press">Press</a>
+          </li>
+          <li>
+            <a shape="rect" href="https://fr.wiki.openfoodfacts.org">Open Pet Food Facts wiki (en)</a>
+          </li>
+          <li>
+            <a shape="rect" href="/cgi/top_translators.pl">Translators</a>
+          </li>
+          <li>
+            <a shape="rect" href="/partners">Partners</a>
+          </li>
+          <li>
+            <a shape="rect" href="https://world-fr.openbeautyfacts.org">Open Beauty Facts - Cosmétiques</a>
+          </li>
+        </ul>
+      </div>
+      <div class="small-12 medium-6 large-3 columns community">
+        <div class="title">Join the community</div>
+        <p>
+          <a shape="rect" href="/code-of-conduct">Code of conduct</a>
+          <br clear="none"/>
+          <br clear="none"/>
+
+			Join us on           <a shape="rect" href="https://slack.openfoodfacts.org">Slack</a>
+:
+			          <br clear="none"/>
+
+			et le           <a shape="rect" href="https://www.facebook.com/groups/OpenFoodFacts/">groupe Facebook des contributeurs</a>
+
+			Follow us on           <a shape="rect" href="https://twitter.com/openfoodfacts">Twitter</a>
+,
+          <a shape="rect" href="https://www.facebook.com/OpenFoodFacts">Facebook</a>
+ and
+          <a shape="rect" href="https://www.instagram.com/open.food.facts/">Instagram</a>
+        </p>
+      </div>
+    </footer>
+    <div id="fb-root"/>
+    <script src="https://static.openpetfoodfacts.org/js/dist/modernizr.js"/>
+    <script src="https://static.openpetfoodfacts.org/js/dist/jquery.js"/>
+    <script src="https://static.openpetfoodfacts.org/js/dist/jquery-ui.js"/>
+    <script src="https://static.openpetfoodfacts.org/js/dist/display.js"/>
+    <script>
+$(function() {
+
+// start off canvas blocks for small screens
+
+    $('#imgupload_search_block_side').fileupload({
+		sequentialUploads: true,
+        dataType: 'json',
+        url: '/cgi/product.pl',
+		formData : [{name: 'jqueryfileupload', value: 1}],
+		resizeMaxWidth : 2000,
+		resizeMaxHeight : 2000,
+        done: function (e, data) {
+			if (data.result.location) {
+				$(location).attr('href',data.result.location);
+			}
+			if (data.result.error) {
+				$("#imgsearcherror_block_side").html(data.result.error);
+				$("#imgsearcherror_block_side").show();
+			}
+        },
+		fail : function (e, data) {
+			$("#imgsearcherror_block_side").show();
+        },
+		always : function (e, data) {
+			$("#progressbar_block_side").hide();
+			$("#imgsearchbutton_block_side").show();
+			$("#imgsearchmsg_block_side").hide();
+        },
+		start: function (e, data) {
+			$("#imgsearchbutton_block_side").hide();
+			$("#imgsearcherror_block_side").hide();
+			$("#imgsearchmsg_block_side").show();
+			$("#progressbar_block_side").show();
+			$("#progressmeter_block_side").css('width', "0%");
+
+		},
+            sent: function (e, data) {
+                if (data.dataType &amp;&amp;
+                        data.dataType.substr(0, 6) === 'iframe') {
+                    // Iframe Transport does not support progress events.
+                    // In lack of an indeterminate progress bar, we set
+                    // the progress to 100%, showing the full animated bar:
+                    $("#progressmeter_block_side").css('width', "100%");
+                }
+            },
+            progress: function (e, data) {
+
+                   $("#progressmeter_block_side").css('width', parseInt(data.loaded / data.total * 100, 10) + "%");
+					$("#imgsearchdebug_block_side").html(data.loaded + ' / ' + data.total);
+
+            }
+
+    });
+
+// end off canvas blocks for small screens
+
+
+if ($.cookie('hide_image_banner') == '1') {
+	$('#hide_image_banner').prop('checked',true);
+	$("#image_banner").hide();
+	$("#hide_image_banner_hide").hide();
+	$("#hide_image_banner_show").show();
+}
+else {
+	$('#hide_image_banner').prop('checked',false);
+	$("#image_banner").show();
+	$("#hide_image_banner_hide").show();
+	$("#hide_image_banner_show").hide();
+}
+
+$("#hide_image_banner").change(function () {
+	if ($('#hide_image_banner').prop('checked')) {
+		$.cookie('hide_image_banner', '1', { expires: 180, path: '/' });
+		$("#image_banner").hide();
+		$("#hide_image_banner_hide").hide();
+		$("#hide_image_banner_show").show();
+	}
+	else {
+		$.cookie('hide_image_banner', null, { path: '/'});
+
+		$("#image_banner").show();
+		$("#hide_image_banner_hide").show();
+		$("#hide_image_banner_show").hide();
+	}
+}
+);
+
+
+});
+</script>
+    <script src="https://static.openpetfoodfacts.org/js/dist/foundation.js"/>
+    <script src="https://static.openpetfoodfacts.org/js/dist/jquery.cookie.js"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js" integrity="sha256-d/edyIFneUo3SvmaFnf96hRcVBcyaOy96iMkPez1kaU=" crossorigin="anonymous"/>
+    <script type="text/javascript" src="https://static.openpetfoodfacts.org/js/dist/jquery.iframe-transport.js"/>
+    <script type="text/javascript" src="https://static.openpetfoodfacts.org/js/dist/jquery.fileupload.js"/>
+    <script type="text/javascript" src="https://static.openpetfoodfacts.org/js/dist/load-image.all.min.js"/>
+    <script type="text/javascript" src="https://static.openpetfoodfacts.org/js/dist/canvas-to-blob.js"/>
+    <script>
+$(document).foundation({
+	equalizer : {
+		equalize_on_stack: true
+	},
+	accordion: {
+		callback : function (accordion) {
+			$(document).foundation('equalizer', 'reflow');
+		}
+	}
+});
+</script>
+    <script type="application/ld+json">
+{
+	"@context" : "https://schema.org",
+	"@type" : "WebSite",
+	"name" : "Open Pet Food Facts",
+	"url" : "https://world.openpetfoodfacts.org",
+	"potentialAction": {
+		"@type": "SearchAction",
+		"target": "https://world.openpetfoodfacts.org/cgi/search.pl?search_terms=?{search_term_string}",
+		"query-input": "required name=search_term_string"
+	}
+}
+{
+	"@context": "https://schema.org/",
+	"@type": "Organization",
+	"url": "https://world.openpetfoodfacts.org",
+	"logo": "https://static.openpetfoodfacts.org/images/misc/openfoodfacts-logo-en-178x150.png",
+	"name": "Open Pet Food Facts",
+	"sameAs" : [ "https://www.facebook.com/OpenPetFoodFacts.fr", "https://twitter.com/OpenFoodFactsFr"]
+}
+</script>
+  </body>
+</html>

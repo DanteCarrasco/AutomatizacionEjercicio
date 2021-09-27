@@ -1,0 +1,852 @@
+{
+    "code": "20106836",
+    "product": {
+        "minerals_tags": [
+            
+        ],
+        "editors_tags": [
+            "teolemon",
+            "jeanbono",
+            "psine",
+            "aleene"
+        ],
+        "additives_prev_n": 0,
+        "lang_debug_tags": [
+            
+        ],
+        "last_editor": "psine",
+        "additives_prev_original_tags": [
+            
+        ],
+        "nova_group": 1,
+        "last_modified_by": "psine",
+        "additives_prev": " [ viande-et-sous-produits-animaux -> fr:viande-et-sous-produits-animaux  ]  [ viande-et-sous-produits -> fr:viande-et-sous-produits  ]  [ viande-et-sous -> fr:viande-et-sous  ]  [ viande-et -> fr:viande-et  ]  [ viande -> fr:viande  ]  [ 4-veau -> fr:4-veau  ]  [ 4 -> en:fd-c  ]  [ 4-dinde -> fr:4-dinde  ]  [ 4 -> en:fd-c  ]  [ legumes -> fr:legumes  ]  [ 4-carottes-et-petits-pois -> fr:4-carottes-et-petits-pois  ]  [ 4-carottes-et-petits -> fr:4-carottes-et-petits  ]  [ 4-carottes-et -> fr:4-carottes-et  ]  [ 4-carottes -> fr:4-carottes  ]  [ 4 -> en:fd-c  ]  [ substances-minerales -> fr:substances-minerales  ]  [ substances -> fr:substances  ]  [ poisson-et-sous-produit-de-poisson -> fr:poisson-et-sous-produit-de-poisson  ]  [ poisson-et-sous-produit-de -> fr:poisson-et-sous-produit-de  ]  [ poisson-et-sous-produit -> fr:poisson-et-sous-produit  ]  [ poisson-et-sous -> fr:poisson-et-sous  ]  [ poisson-et -> fr:poisson-et  ]  [ poisson -> fr:poisson  ]  [ sucre -> fr:sucre  ] ",
+        "image_url": "https://static.openpetfoodfacts.org/images/products/20106836/front_fr.5.400.jpg",
+        "image_ingredients_small_url": "https://static.openpetfoodfacts.org/images/products/20106836/ingredients_fr.7.200.jpg",
+        "traces_hierarchy": [
+            
+        ],
+        "states": "en:to-be-checked, en:complete, en:nutrition-facts-completed, en:ingredients-completed, en:expiration-date-to-be-completed, en:packaging-code-to-be-completed, en:characteristics-completed, en:categories-completed, en:brands-completed, en:packaging-completed, en:quantity-completed, en:product-name-completed, en:photos-validated, en:photos-uploaded",
+        "image_ingredients_thumb_url": "https://static.openpetfoodfacts.org/images/products/20106836/ingredients_fr.7.100.jpg",
+        "serving_quantity": 300,
+        "allergens_from_user": "(fr)",
+        "nutrition_data_prepared_per_debug_tags": [
+            
+        ],
+        "serving_size": "300 g",
+        "created_t": 1431769156,
+        "nutrient_levels": {
+            "fat": "moderate"
+        },
+        "rev": 12,
+        "photographers_tags": [
+            "jeanbono"
+        ],
+        "product_name_fr": "Ragoût au veau, à la dinde et aux légumes",
+        "labels_prev_hierarchy": [
+            
+        ],
+        "image_nutrition_thumb_url": "https://static.openpetfoodfacts.org/images/products/20106836/nutrition_fr.8.100.jpg",
+        "ingredients_text_with_allergens": "Viande et sous-produits animaux (4% veau, 4% dinde), légumes (4% carottes et petits pois), substances minérales, <span class=\"allergen\">poisson</span> et sous-produit de poisson, sucre.",
+        "images": {
+            "front_fr": {
+                "normalize": "false",
+                "geometry": "2080x2081-620-218",
+                "sizes": {
+                    "100": {
+                        "w": 100,
+                        "h": 100
+                    },
+                    "400": {
+                        "h": 400,
+                        "w": 400
+                    },
+                    "full": {
+                        "w": 2080,
+                        "h": 2081
+                    },
+                    "200": {
+                        "w": 200,
+                        "h": 200
+                    }
+                },
+                "imgid": "1",
+                "rev": "5",
+                "white_magic": "false"
+            },
+            "ingredients": {
+                "white_magic": "false",
+                "rev": "7",
+                "sizes": {
+                    "200": {
+                        "h": 57,
+                        "w": 200
+                    },
+                    "full": {
+                        "w": 1004,
+                        "h": 285
+                    },
+                    "400": {
+                        "w": 400,
+                        "h": 114
+                    },
+                    "100": {
+                        "w": 100,
+                        "h": 28
+                    }
+                },
+                "imgid": "2",
+                "normalize": "false",
+                "geometry": "1004x285-1113-1536"
+            },
+            "nutrition": {
+                "normalize": "false",
+                "geometry": "971x425-1130-1120",
+                "sizes": {
+                    "200": {
+                        "h": 88,
+                        "w": 200
+                    },
+                    "full": {
+                        "h": 425,
+                        "w": 971
+                    },
+                    "400": {
+                        "h": 175,
+                        "w": 400
+                    },
+                    "100": {
+                        "w": 100,
+                        "h": 44
+                    }
+                },
+                "imgid": "2",
+                "rev": "8",
+                "white_magic": "false"
+            },
+            "front": {
+                "normalize": "false",
+                "geometry": "2080x2081-620-218",
+                "sizes": {
+                    "100": {
+                        "w": 100,
+                        "h": 100
+                    },
+                    "400": {
+                        "h": 400,
+                        "w": 400
+                    },
+                    "full": {
+                        "w": 2080,
+                        "h": 2081
+                    },
+                    "200": {
+                        "w": 200,
+                        "h": 200
+                    }
+                },
+                "imgid": "1",
+                "rev": "5",
+                "white_magic": "false"
+            },
+            "2": {
+                "uploaded_t": 1431769168,
+                "uploader": "jeanbono",
+                "sizes": {
+                    "full": {
+                        "w": 2448,
+                        "h": 3264
+                    },
+                    "100": {
+                        "h": 100,
+                        "w": 75
+                    },
+                    "400": {
+                        "h": 400,
+                        "w": 300
+                    }
+                }
+            },
+            "1": {
+                "uploaded_t": 1431769157,
+                "sizes": {
+                    "full": {
+                        "w": 2448,
+                        "h": 3264
+                    },
+                    "400": {
+                        "w": 300,
+                        "h": 400
+                    },
+                    "100": {
+                        "w": 75,
+                        "h": 100
+                    }
+                },
+                "uploader": "jeanbono"
+            },
+            "ingredients_fr": {
+                "white_magic": "false",
+                "rev": "7",
+                "sizes": {
+                    "200": {
+                        "h": 57,
+                        "w": 200
+                    },
+                    "full": {
+                        "w": 1004,
+                        "h": 285
+                    },
+                    "400": {
+                        "w": 400,
+                        "h": 114
+                    },
+                    "100": {
+                        "w": 100,
+                        "h": 28
+                    }
+                },
+                "imgid": "2",
+                "normalize": "false",
+                "geometry": "1004x285-1113-1536"
+            },
+            "nutrition_fr": {
+                "normalize": "false",
+                "geometry": "971x425-1130-1120",
+                "sizes": {
+                    "200": {
+                        "h": 88,
+                        "w": 200
+                    },
+                    "full": {
+                        "h": 425,
+                        "w": 971
+                    },
+                    "400": {
+                        "h": 175,
+                        "w": 400
+                    },
+                    "100": {
+                        "w": 100,
+                        "h": 44
+                    }
+                },
+                "imgid": "2",
+                "rev": "8",
+                "white_magic": "false"
+            }
+        },
+        "categories_prev_tags": [
+            "en:pet-food",
+            "en:dog-food",
+            "fr:patees-pour-chiens"
+        ],
+        "nutrition_data_per_debug_tags": [
+            
+        ],
+        "nucleotides_tags": [
+            
+        ],
+        "ingredients_n_tags": [
+            "8",
+            "1-10"
+        ],
+        "traces_tags": [
+            
+        ],
+        "nucleotides_prev_tags": [
+            
+        ],
+        "ingredients_text_debug": "Viande et sous-produits animaux (4% veau, 4% dinde), légumes (4% carottes et petits pois), substances minérales, poisson et sous-produit de poisson, sucre.",
+        "languages_tags": [
+            "en:french",
+            "en:1"
+        ],
+        "emb_codes_orig": "",
+        "brands": "Orlando",
+        "emb_codes_20141016": "",
+        "ingredients_tags": [
+            "fr:viande-et-sous-produits-animaux",
+            "",
+            "",
+            "fr:legumes",
+            "",
+            "",
+            "fr:carottes-et-petits-pois",
+            "",
+            "",
+            "fr:substances-minerales",
+            "",
+            "",
+            "fr:poisson-et-sous-produit-de-poisson",
+            "",
+            "",
+            "fr:sucre",
+            "",
+            "",
+            "fr:veau",
+            "",
+            "",
+            "fr:dinde"
+        ],
+        "labels_hierarchy": [
+            
+        ],
+        "pnns_groups_2_tags": [
+            "unknown"
+        ],
+        "minerals_prev_tags": [
+            
+        ],
+        "manufacturing_places_debug_tags": [
+            
+        ],
+        "entry_dates_tags": [
+            "2015-05-16",
+            "2015-05",
+            "2015"
+        ],
+        "image_nutrition_small_url": "https://static.openpetfoodfacts.org/images/products/20106836/nutrition_fr.8.200.jpg",
+        "id": "20106836",
+        "additives_prev_tags": [
+            
+        ],
+        "quantity": "300 g",
+        "product_name": "Ragoût au veau, à la dinde et aux légumes",
+        "ingredients_from_palm_oil_tags": [
+            
+        ],
+        "additives_n": 0,
+        "lang": "fr",
+        "nutrient_levels_tags": [
+            "en:fat-in-moderate-quantity"
+        ],
+        "purchase_places": "France",
+        "additives_original_tags": [
+            
+        ],
+        "ingredients_text": "Viande et sous-produits animaux (4% veau, 4% dinde), légumes (4% carottes et petits pois), substances minérales, poisson et sous-produit de poisson, sucre.",
+        "amino_acids_tags": [
+            
+        ],
+        "codes_tags": [
+            "code-8",
+            "20106836",
+            "2010683x",
+            "201068xx",
+            "20106xxx",
+            "2010xxxx",
+            "201xxxxx",
+            "20xxxxxx",
+            "2xxxxxxx"
+        ],
+        "labels_debug_tags": [
+            
+        ],
+        "purchase_places_debug_tags": [
+            
+        ],
+        "manufacturing_places": "",
+        "additives_tags": [
+            
+        ],
+        "allergens_debug_tags": [
+            
+        ],
+        "emb_codes": "",
+        "nutrition_data_per": "100g",
+        "categories": "Nourriture pour animaux, Nourriture pour chiens, Pâtées pour chiens",
+        "image_front_url": "https://static.openpetfoodfacts.org/images/products/20106836/front_fr.5.400.jpg",
+        "update_key": "key_1548591787",
+        "traces_from_ingredients": "",
+        "origins": "",
+        "last_modified_t": 1548496986,
+        "last_edit_dates_tags": [
+            "2019-01-26",
+            "2019-01",
+            "2019"
+        ],
+        "additives_debug_tags": [
+            
+        ],
+        "checkers_tags": [
+            
+        ],
+        "categories_debug_tags": [
+            "added-en-wet-pet-food",
+            "added-en-wet-dog-food",
+            "removed-fr-patees-pour-chiens"
+        ],
+        "additives_old_tags": [
+            
+        ],
+        "image_ingredients_url": "https://static.openpetfoodfacts.org/images/products/20106836/ingredients_fr.7.400.jpg",
+        "labels_lc": "fr",
+        "interface_version_modified": "20120622",
+        "nova_group_debug": "",
+        "vitamins_prev_tags": [
+            
+        ],
+        "countries_tags": [
+            "en:france"
+        ],
+        "nova_groups": 1,
+        "ingredients_original_tags": [
+            "fr:Viande et sous-produits animaux",
+            "fr:légumes",
+            "fr:carottes et petits pois",
+            "fr:substances minérales",
+            "fr:poisson et sous-produit de poisson",
+            "fr:sucre",
+            "fr:veau",
+            "fr:dinde"
+        ],
+        "nutrition_data": "on",
+        "ingredients_that_may_be_from_palm_oil_n": 0,
+        "selected_images": {
+            "front": {
+                "small": {
+                    "fr": "https://static.openpetfoodfacts.org/images/products/20106836/front_fr.5.200.jpg"
+                },
+                "display": {
+                    "fr": "https://static.openpetfoodfacts.org/images/products/20106836/front_fr.5.400.jpg"
+                },
+                "thumb": {
+                    "fr": "https://static.openpetfoodfacts.org/images/products/20106836/front_fr.5.100.jpg"
+                }
+            },
+            "nutrition": {
+                "small": {
+                    "fr": "https://static.openpetfoodfacts.org/images/products/20106836/nutrition_fr.8.200.jpg"
+                },
+                "display": {
+                    "fr": "https://static.openpetfoodfacts.org/images/products/20106836/nutrition_fr.8.400.jpg"
+                },
+                "thumb": {
+                    "fr": "https://static.openpetfoodfacts.org/images/products/20106836/nutrition_fr.8.100.jpg"
+                }
+            },
+            "ingredients": {
+                "display": {
+                    "fr": "https://static.openpetfoodfacts.org/images/products/20106836/ingredients_fr.7.400.jpg"
+                },
+                "small": {
+                    "fr": "https://static.openpetfoodfacts.org/images/products/20106836/ingredients_fr.7.200.jpg"
+                },
+                "thumb": {
+                    "fr": "https://static.openpetfoodfacts.org/images/products/20106836/ingredients_fr.7.100.jpg"
+                }
+            }
+        },
+        "image_small_url": "https://static.openpetfoodfacts.org/images/products/20106836/front_fr.5.200.jpg",
+        "editors": [
+            "teolemon",
+            "jeanbono"
+        ],
+        "last_image_t": 1490949164,
+        "interface_version_created": "20120622",
+        "nutrition_grades_tags": [
+            "unknown"
+        ],
+        "nutrition_data_prepared_per": "serving",
+        "image_nutrition_url": "https://static.openpetfoodfacts.org/images/products/20106836/nutrition_fr.8.400.jpg",
+        "max_imgid": "2",
+        "countries_lc": "fr",
+        "image_thumb_url": "https://static.openpetfoodfacts.org/images/products/20106836/front_fr.5.100.jpg",
+        "packaging_debug_tags": [
+            
+        ],
+        "categories_lc": "fr",
+        "no_nutrition_data": "on",
+        "packaging": "Barquette",
+        "brands_debug_tags": [
+            
+        ],
+        "sortkey": 1548496986,
+        "lc": "fr",
+        "product_quantity": 300,
+        "states_hierarchy": [
+            "en:to-be-checked",
+            "en:complete",
+            "en:nutrition-facts-completed",
+            "en:ingredients-completed",
+            "en:expiration-date-to-be-completed",
+            "en:packaging-code-to-be-completed",
+            "en:characteristics-completed",
+            "en:categories-completed",
+            "en:brands-completed",
+            "en:packaging-completed",
+            "en:quantity-completed",
+            "en:product-name-completed",
+            "en:photos-validated",
+            "en:photos-uploaded"
+        ],
+        "labels_prev_tags": [
+            
+        ],
+        "countries_hierarchy": [
+            "en:france"
+        ],
+        "misc_tags": [
+            "en:nutriscore-not-computed",
+            "en:nutrition-not-enough-data-to-compute-nutrition-score",
+            "en:nutrition-no-saturated-fat"
+        ],
+        "allergens_lc": "fr",
+        "complete": 1,
+        "pnns_groups_1": "unknown",
+        "traces": "",
+        "completed_t": 1431876748,
+        "image_front_small_url": "https://static.openpetfoodfacts.org/images/products/20106836/front_fr.5.200.jpg",
+        "generic_name": "Aliment complet pour chien adulte",
+        "countries_debug_tags": [
+            
+        ],
+        "stores": "Lidl",
+        "purchase_places_tags": [
+            "france"
+        ],
+        "additives": " [ viande-et-sous-produits-animaux -> fr:viande-et-sous-produits-animaux  ]  [ viande-et-sous-produits -> fr:viande-et-sous-produits  ]  [ viande-et-sous -> fr:viande-et-sous  ]  [ viande-et -> fr:viande-et  ]  [ viande -> fr:viande  ]  [ 4-veau -> fr:4-veau  ]  [ 4 -> en:fd-c  ]  [ 4-dinde -> fr:4-dinde  ]  [ 4 -> en:fd-c  ]  [ legumes -> fr:legumes  ]  [ 4-carottes-et-petits-pois -> fr:4-carottes-et-petits-pois  ]  [ 4-carottes-et-petits -> fr:4-carottes-et-petits  ]  [ 4-carottes-et -> fr:4-carottes-et  ]  [ 4-carottes -> fr:4-carottes  ]  [ 4 -> en:fd-c  ]  [ substances-minerales -> fr:substances-minerales  ]  [ substances -> fr:substances  ]  [ poisson-et-sous-produit-de-poisson -> fr:poisson-et-sous-produit-de-poisson  ]  [ poisson-et-sous-produit-de -> fr:poisson-et-sous-produit-de  ]  [ poisson-et-sous-produit -> fr:poisson-et-sous-produit  ]  [ poisson-et-sous -> fr:poisson-et-sous  ]  [ poisson-et -> fr:poisson-et  ]  [ poisson -> fr:poisson  ]  [ sucre -> fr:sucre  ] ",
+        "brands_tags": [
+            "orlando"
+        ],
+        "ingredients_debug": [
+            "Viande et sous-produits animaux ",
+            "(",
+            "(",
+            null,
+            null,
+            "4% veau",
+            ",",
+            null,
+            null,
+            null,
+            " 4% dinde)",
+            ",",
+            null,
+            null,
+            null,
+            " légumes ",
+            "(",
+            "(",
+            null,
+            null,
+            "4% carottes et petits pois)",
+            ",",
+            null,
+            null,
+            null,
+            " substances minérales",
+            ",",
+            null,
+            null,
+            null,
+            " poisson et sous-produit de poisson",
+            ",",
+            null,
+            null,
+            null,
+            " sucre."
+        ],
+        "serving_size_debug_tags": [
+            
+        ],
+        "ingredients_that_may_be_from_palm_oil_tags": [
+            
+        ],
+        "categories_prev_hierarchy": [
+            "en:pet-food",
+            "en:dog-food",
+            "fr:Pâtées pour chiens"
+        ],
+        "manufacturing_places_tags": [
+            
+        ],
+        "ingredients_from_or_that_may_be_from_palm_oil_n": 0,
+        "expiration_date": "",
+        "nutrition_score_debug": "missing energy",
+        "categories_hierarchy": [
+            "en:pet-food",
+            "en:dog-food",
+            "en:wet-pet-food",
+            "en:wet-dog-food"
+        ],
+        "correctors_tags": [
+            "teolemon",
+            "jeanbono",
+            "aleene",
+            "psine"
+        ],
+        "_id": "20106836",
+        "traces_from_user": "(fr)",
+        "emb_codes_debug_tags": [
+            
+        ],
+        "languages_codes": {
+            "fr": 6
+        },
+        "ingredients_text_fr_debug_tags": [
+            
+        ],
+        "link": "",
+        "states_tags": [
+            "en:to-be-checked",
+            "en:complete",
+            "en:nutrition-facts-completed",
+            "en:ingredients-completed",
+            "en:expiration-date-to-be-completed",
+            "en:packaging-code-to-be-completed",
+            "en:characteristics-completed",
+            "en:categories-completed",
+            "en:brands-completed",
+            "en:packaging-completed",
+            "en:quantity-completed",
+            "en:product-name-completed",
+            "en:photos-validated",
+            "en:photos-uploaded"
+        ],
+        "ingredients_n": "8",
+        "languages": {
+            "en:french": 6
+        },
+        "allergens": "",
+        "additives_old_n": 0,
+        "traces_lc": "fr",
+        "allergens_tags": [
+            "en:fish"
+        ],
+        "packaging_tags": [
+            "barquette"
+        ],
+        "pnns_groups_2": "unknown",
+        "nova_groups_tags": [
+            "en:1"
+        ],
+        "creator": "jeanbono",
+        "countries": "France",
+        "ingredients": [
+            {
+                "id": "fr:Viande et sous-produits animaux",
+                "rank": 1,
+                "text": "Viande et sous-produits animaux"
+            },
+            {
+                "id": "fr:légumes",
+                "rank": 2,
+                "text": "légumes"
+            },
+            {
+                "percent": "4",
+                "id": "fr:carottes et petits pois",
+                "rank": 3,
+                "text": "carottes et petits pois"
+            },
+            {
+                "rank": 4,
+                "text": "substances minérales",
+                "id": "fr:substances minérales"
+            },
+            {
+                "rank": 5,
+                "text": "poisson et sous-produit de poisson",
+                "id": "fr:poisson et sous-produit de poisson"
+            },
+            {
+                "id": "fr:sucre",
+                "text": "sucre",
+                "rank": 6
+            },
+            {
+                "percent": "4",
+                "id": "fr:veau",
+                "text": "veau"
+            },
+            {
+                "text": "dinde",
+                "percent": "4",
+                "id": "fr:dinde"
+            }
+        ],
+        "debug_param_sorted_langs": [
+            "fr"
+        ],
+        "quantity_debug_tags": [
+            
+        ],
+        "ingredients_from_palm_oil_n": 0,
+        "pnns_groups_1_tags": [
+            "unknown"
+        ],
+        "unknown_ingredients_n": 22,
+        "_keywords": [
+            "nourriture",
+            "veau",
+            "complet",
+            "adulte",
+            "et",
+            "pour",
+            "la",
+            "chien",
+            "ragout",
+            "aliment",
+            "dinde",
+            "legume",
+            "aux",
+            "au",
+            "patee",
+            "orlando"
+        ],
+        "cities_tags": [
+            
+        ],
+        "languages_hierarchy": [
+            "en:french"
+        ],
+        "image_front_thumb_url": "https://static.openpetfoodfacts.org/images/products/20106836/front_fr.5.100.jpg",
+        "vitamins_tags": [
+            
+        ],
+        "ingredients_ids_debug": [
+            "viande-et-sous-produits-animaux",
+            "4-veau",
+            "4-dinde",
+            "legumes",
+            "4-carottes-et-petits-pois",
+            "substances-minerales",
+            "poisson-et-sous-produit-de-poisson",
+            "sucre"
+        ],
+        "expiration_date_debug_tags": [
+            
+        ],
+        "last_image_dates_tags": [
+            "2017-03-31",
+            "2017-03",
+            "2017"
+        ],
+        "labels": "",
+        "ingredients_text_fr": "Viande et sous-produits animaux (4% veau, 4% dinde), légumes (4% carottes et petits pois), substances minérales, poisson et sous-produit de poisson, sucre.",
+        "nutrition_data_prepared": "",
+        "generic_name_fr": "Aliment complet pour chien adulte",
+        "traces_debug_tags": [
+            
+        ],
+        "product_name_fr_debug_tags": [
+            
+        ],
+        "quality_tags": [
+            "ingredients-unknown-score-above-30",
+            "ingredients-100-percent-unknown",
+            "no-nutrition-data"
+        ],
+        "origins_tags": [
+            
+        ],
+        "ingredients_text_with_allergens_fr": "Viande et sous-produits animaux (4% veau, 4% dinde), légumes (4% carottes et petits pois), substances minérales, <span class=\"allergen\">poisson</span> et sous-produit de poisson, sucre.",
+        "allergens_hierarchy": [
+            "en:fish"
+        ],
+        "new_additives_n": 0,
+        "generic_name_fr_debug_tags": [
+            
+        ],
+        "code": "20106836",
+        "categories_tags": [
+            "en:pet-food",
+            "en:dog-food",
+            "en:wet-pet-food",
+            "en:wet-dog-food"
+        ],
+        "nutriments": {
+            "humidity_value": "83",
+            "humidity_unit": "g",
+            "fibre": 0.4,
+            "fat_unit": "g",
+            "ash_100g": "2",
+            "proteins_value": "10",
+            "proteins": "10",
+            "ash": "2",
+            "fibre_label": "Fibre",
+            "nova-group_serving": "1",
+            "ash_serving": "6",
+            "ash_label": "Ash",
+            "proteins_100g": "10",
+            "nova-group": "1",
+            "nova-group_100g": "1",
+            "humidity_label": "Humidity ",
+            "fibre_serving": 1.2,
+            "fibre_value": "0.4",
+            "humidity_serving": "249",
+            "fat": 3.5,
+            "humidity": "83",
+            "humidity_100g": "83",
+            "fibre_100g": 0.4,
+            "fibre_unit": "g",
+            "proteins_unit": "g",
+            "ash_unit": "g",
+            "ash_value": "2.0",
+            "fat_value": "3.5",
+            "proteins_serving": "30",
+            "fat_serving": 10.5,
+            "fat_100g": 3.5
+        },
+        "origins_debug_tags": [
+            
+        ],
+        "allergens_from_ingredients": "poisson",
+        "stores_tags": [
+            "lidl"
+        ],
+        "labels_tags": [
+            
+        ],
+        "unknown_nutrients_tags": [
+            "fibre",
+            "ash",
+            "humidity"
+        ],
+        "ingredients_hierarchy": [
+            "fr:Viande et sous-produits animaux",
+            "",
+            " ",
+            "fr:légumes",
+            "",
+            " ",
+            "fr:carottes et petits pois",
+            "",
+            " ",
+            "fr:substances minérales",
+            "",
+            " ",
+            "fr:poisson et sous-produit de poisson",
+            "",
+            " ",
+            "fr:sucre",
+            "",
+            " ",
+            "fr:veau",
+            "",
+            " ",
+            "fr:dinde"
+        ],
+        "stores_debug_tags": [
+            
+        ],
+        "link_debug_tags": [
+            
+        ],
+        "informers_tags": [
+            "jeanbono",
+            "teolemon",
+            "aleene"
+        ],
+        "amino_acids_prev_tags": [
+            
+        ],
+        "emb_codes_tags": [
+            
+        ]
+    },
+    "status_verbose": "product found",
+    "status": 1
+}

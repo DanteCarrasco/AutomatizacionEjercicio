@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Ejemplo de Automatización en APIs" skipped="0" tests="2" time="9.87" timestamp="2021-08-10 08:42:06"><testcase name="Solicitud de consulta de comida para mascotas escenario correcto"/><testcase name="Solicitud de consulta de comida para mascotas escenario incorrecto"/></testsuite>

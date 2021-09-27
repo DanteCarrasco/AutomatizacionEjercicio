@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Ejemplo de Automatización en APIs con método POST" skipped="0" tests="2" time="5.92" timestamp="2021-08-11 02:44:01"><testcase name="Solicitud de consulta de Publicaciones con escenario correcto"/><testcase name="Solicitud de consulta de Publicaciones con escenario incorrecto"/></testsuite>

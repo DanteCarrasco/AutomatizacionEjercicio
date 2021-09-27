@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Ejemplo de Automatización en APIs utilizando Earthquakes" skipped="0" tests="2" time="10.04" timestamp="2021-08-11 02:43:26"><testcase name="Solicitud de consulta de Earthquakes con escenario correcto"/><testcase name="Solicitud de consulta de Earthquakes con escenario incorrecto"/></testsuite>

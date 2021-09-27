@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Solicitud de consulta de comida para mascotas escenario correcto</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<!-- ImgPreview -->
+<script src="scripts/imgpreview.full.jquery.js" type="text/javascript"></script>
+</head>
+
+<body class="results-page">
+
+
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+        <span class="breadcrumbs">
+            <a href="index.html" class="breadcrumbs">Home</a>
+
+            > <a href="88fb9265da8f8ea76640bd70678e31209b0f22a782ef78bc84547a7fc27015df.html">Ejemplo De Automatizaci&oacute;n En Apis</a>
+        > Solicitud de consulta de comida para mascotas escenario correcto
+        </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 10-08-2021 20:42</span>
+    <br style="clear:left"/>
+</div>
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                                <div>
+                                    <h3 class="discreet-story-header">
+                                        <i class="fa fa-2x fa-comments-o"></i>
+                                        <span class="story-header-title">Ejemplo De Automatización En Apis </span>
+                                    </h3>
+
+                                </div>
+
+                        </td>
+                        <td valign="top">
+                                <p class="tag">
+                                    <span class="badge tag-badge" style="background:default;">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;"
+                                                                      href="fd66b78274968ba95aa8ae8ec7cccfa59908ba8ffb933c3cfab7614ed67825e9.html">Pet Food Facts
+                                    (tag)</a>
+                                </span>
+                                </p>
+                                <p class="tag">
+                                    <span class="badge tag-badge" style="background:default;">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;"
+                                                                      href="c4962ebb4213b4e3043b9efe0aff60a9bf5c89a8dc7c5e10ee62cf01c2d98fa0.html">Happy Path
+                                    (tag)</a>
+                                </span>
+                                </p>
+                                <p class="tag">
+                                    <span class="badge tag-badge" style="background:default;">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;"
+                                                                      href="d863a3f5a88770c655cade5ea46f88a811639d8277b12dddf982d63d606ab44f.html">Ejemplos Automatizacion
+                                    (tag)</a>
+                                </span>
+                                </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">
+                                    Solicitud de consulta de comida para mascotas escenario correcto
+                                        <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+
+
+    <div id="tablecontents">
+        <div>
+            <table class="step-table">
+                <tr class="step-titles">
+                    <th width="65">
+                    </th>
+                    <th class="step-description-column greentext">
+                        Steps
+                    </th>
+
+                    <th width="130" class="greentext">Outcome</th>
+                    <th width="100" class="greentext"><i title="Duration" class="far fa-clock"></i></th>
+                </tr>
+                <tr class="step-table-separator">
+                    <td colspan="5"></td>
+                </tr>
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="50" class="step-icon">
+                            <a name="0"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection0 success-icon"
+                                       style="margin-left: 20px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                                   style="display:block;">
+                                    <span class="top-level-step">
+                                                Dado que configuro las cabeceras<br><table class='embedded'><thead><th>cabeceras</th><th>valor</th></thead><tbody><tr><td>Authorization</td><td>Bearer TOKEN</td></tr></tbody></table>
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                        <td width="100"><span class="top-level-step">0.27s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection0" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-0"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                Configurando las cabeceras del servicio...
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0.09s</span></td>
+                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="50" class="step-icon">
+                            <a name="1"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection1 success-icon"
+                                       style="margin-left: 20px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                                   style="display:block;">
+                                    <span class="top-level-step">
+                                                Cuando ejecuto el servicio con la configuracion de las cabeceras<br><table class='embedded'><thead><th>servicio</th><th>url</th><th>metodo</th><th>formato</th></thead><tbody><tr><td>Pet Food Facts</td><td>https://world.openpetfoodfacts.org/api/v0/product/20106836.json</td><td>get</td><td>json</td></tr></tbody></table>
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                        <td width="100"><span class="top-level-step">6.88s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection1" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="1-0"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-0')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection1-0 success-icon"
+                                       style="margin-left: 40px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-0')"
+                                   style="display:block;">
+                                    <span class="nested-step">
+                                                Ejecutar el servicio con la configuración de las cabeceras...
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-step">6.88s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection1-0" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="90" class="step-icon">
+                            <a name="1-0-0"></a>
+                                <span style="margin-left: 60px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                GET https://world.openpetfoodfacts.org/api/v0/product/20106836.json
+                                        </span>
+                                <span class="evidence">
+                                        <span class="piece-of-evidence">
+                    <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-5">
+                            REST Query
+                        </button>
+                    </span>
+                    <!-- Modal -->
+                    <div class="rest-query-details">
+                        <div class="collapse multi-collapse" id="restModal-REST-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Response</h4>
+                                        <p>Status code: 200</p>
+                                        <p>Content Type: null</p>
+                                        <h4>Request Headers</h4>
+                                        <pre>Authorization=Bearer TOKEN<br>Accept=*/*</pre>
+                                        <h4>Content Body</h4>
+                                        <pre></pre>
+                                        <h4>Request Cookies</h4>
+                                        <pre></pre>
+                                        <h4>Response Headers</h4>
+                                        <pre>Server: nginx/1.10.3<br>Date: Wed, 11 Aug 2021 01:42:14 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Access-control-allow-origin: *<br>X-Frame-Options: DENY<br>X-Content-Type-Options: nosniff<br>X-Download-Options: noopen<br>X-XSS-Protection: 1; mode=block<br>X-Request-ID: XES3Ho4bQrgKF6fd<br>Strict-Transport-Security: max-age=63072000; includeSubdomains<br>X-Content-Type-Options: nosniff<br>Content-Encoding: gzip</pre>
+                                    <h4>Response Body</h4>
+                                        <pre>{<br>    &quot;product&quot;: {<br>        &quot;allergens_from_ingredients&quot;: &quot;poisson&quot;,<br>        &quot;origins_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;nutriments&quot;: {<br>            &quot;ash_unit&quot;: &quot;g&quot;,<br>            &quot;ash_value&quot;: &quot;2.0&quot;,<br>            &quot;proteins_unit&quot;: &quot;g&quot;,<br>            &quot;fibre_unit&quot;: &quot;g&quot;,<br>            &quot;humidity_100g&quot;: &quot;83&quot;,<br>            &quot;fibre_100g&quot;: 0.4,<br>            &quot;fat_100g&quot;: 3.5,<br>            &quot;fat_serving&quot;: 10.5,<br>            &quot;fat_value&quot;: &quot;3.5&quot;,<br>            &quot;proteins_serving&quot;: &quot;30&quot;,<br>            &quot;fibre_value&quot;: &quot;0.4&quot;,<br>            &quot;fibre_serving&quot;: 1.2,<br>            &quot;humidity_label&quot;: &quot;Humidity &quot;,<br>            &quot;nova-group_100g&quot;: &quot;1&quot;,<br>            &quot;nova-group&quot;: &quot;1&quot;,<br>            &quot;humidity&quot;: &quot;83&quot;,<br>            &quot;fat&quot;: 3.5,<br>            &quot;humidity_serving&quot;: &quot;249&quot;,<br>            &quot;ash_label&quot;: &quot;Ash&quot;,<br>            &quot;ash_serving&quot;: &quot;6&quot;,<br>            &quot;fibre_label&quot;: &quot;Fibre&quot;,<br>            &quot;nova-group_serving&quot;: &quot;1&quot;,<br>            &quot;proteins&quot;: &quot;10&quot;,<br>            &quot;ash&quot;: &quot;2&quot;,<br>            &quot;proteins_100g&quot;: &quot;10&quot;,<br>            &quot;fibre&quot;: 0.4,<br>            &quot;humidity_unit&quot;: &quot;g&quot;,<br>            &quot;humidity_value&quot;: &quot;83&quot;,<br>            &quot;proteins_value&quot;: &quot;10&quot;,<br>            &quot;ash_100g&quot;: &quot;2&quot;,<br>            &quot;fat_unit&quot;: &quot;g&quot;<br>        },<br>        &quot;stores_tags&quot;: [<br>            &quot;lidl&quot;<br>        ],<br>        &quot;ingredients_hierarchy&quot;: [<br>            &quot;fr:Viande et sous-produits animaux&quot;,<br>            &quot;&quot;,<br>            &quot; &quot;,<br>            &quot;fr:légumes&quot;,<br>            &quot;&quot;,<br>            &quot; &quot;,<br>            &quot;fr:carottes et petits pois&quot;,<br>            &quot;&quot;,<br>            &quot; &quot;,<br>            &quot;fr:substances minérales&quot;,<br>            &quot;&quot;,<br>            &quot; &quot;,<br>            &quot;fr:poisson et sous-produit de poisson&quot;,<br>            &quot;&quot;,<br>            &quot; &quot;,<br>            &quot;fr:sucre&quot;,<br>            &quot;&quot;,<br>            &quot; &quot;,<br>            &quot;fr:veau&quot;,<br>            &quot;&quot;,<br>            &quot; &quot;,<br>            &quot;fr:dinde&quot;<br>        ],<br>        &quot;unknown_nutrients_tags&quot;: [<br>            &quot;fibre&quot;,<br>            &quot;ash&quot;,<br>            &quot;humidity&quot;<br>        ],<br>        &quot;labels_tags&quot;: [<br>            <br>        ],<br>        &quot;stores_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;informers_tags&quot;: [<br>            &quot;jeanbono&quot;,<br>            &quot;teolemon&quot;,<br>            &quot;aleene&quot;<br>        ],<br>        &quot;link_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;amino_acids_prev_tags&quot;: [<br>            <br>        ],<br>        &quot;emb_codes_tags&quot;: [<br>            <br>        ],<br>        &quot;image_front_thumb_url&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/front_fr.5.100.jpg&quot;,<br>        &quot;ingredients_ids_debug&quot;: [<br>            &quot;viande-et-sous-produits-animaux&quot;,<br>            &quot;4-veau&quot;,<br>            &quot;4-dinde&quot;,<br>            &quot;legumes&quot;,<br>            &quot;4-carottes-et-petits-pois&quot;,<br>            &quot;substances-minerales&quot;,<br>            &quot;poisson-et-sous-produit-de-poisson&quot;,<br>            &quot;sucre&quot;<br>        ],<br>        &quot;vitamins_tags&quot;: [<br>            <br>        ],<br>        &quot;last_image_dates_tags&quot;: [<br>            &quot;2017-03-31&quot;,<br>            &quot;2017-03&quot;,<br>            &quot;2017&quot;<br>        ],<br>        &quot;labels&quot;: &quot;&quot;,<br>        &quot;expiration_date_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;nutrition_data_prepared&quot;: &quot;&quot;,<br>        &quot;ingredients_text_fr&quot;: &quot;Viande et sous-produits animaux (4% veau, 4% dinde), légumes (4% carottes et petits pois), substances minérales, poisson et sous-produit de poisson, sucre.&quot;,<br>        &quot;traces_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;generic_name_fr&quot;: &quot;Aliment complet pour chien adulte&quot;,<br>        &quot;origins_tags&quot;: [<br>            <br>        ],<br>        &quot;quality_tags&quot;: [<br>            &quot;ingredients-unknown-score-above-30&quot;,<br>            &quot;ingredients-100-percent-unknown&quot;,<br>            &quot;no-nutrition-data&quot;<br>        ],<br>        &quot;ingredients_text_with_allergens_fr&quot;: &quot;Viande et sous-produits animaux (4% veau, 4% dinde), légumes (4% carottes et petits pois), substances minérales, &lt;span class=\&quot;allergen\&quot;&gt;poisson&lt;/span&gt; et sous-produit de poisson, sucre.&quot;,<br>        &quot;product_name_fr_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;new_additives_n&quot;: 0,<br>        &quot;allergens_hierarchy&quot;: [<br>            &quot;en:fish&quot;<br>        ],<br>        &quot;code&quot;: &quot;20106836&quot;,<br>        &quot;generic_name_fr_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;categories_tags&quot;: [<br>            &quot;en:pet-food&quot;,<br>            &quot;en:dog-food&quot;,<br>            &quot;en:wet-pet-food&quot;,<br>            &quot;en:wet-dog-food&quot;<br>        ],<br>        &quot;ingredients_n&quot;: &quot;8&quot;,<br>        &quot;traces_lc&quot;: &quot;fr&quot;,<br>        &quot;allergens_tags&quot;: [<br>            &quot;en:fish&quot;<br>        ],<br>        &quot;languages&quot;: {<br>            &quot;en:french&quot;: 6<br>        },<br>        &quot;allergens&quot;: &quot;&quot;,<br>        &quot;additives_old_n&quot;: 0,<br>        &quot;nova_groups_tags&quot;: [<br>            &quot;en:1&quot;<br>        ],<br>        &quot;creator&quot;: &quot;jeanbono&quot;,<br>        &quot;countries&quot;: &quot;France&quot;,<br>        &quot;ingredients&quot;: [<br>            {<br>                &quot;rank&quot;: 1,<br>                &quot;text&quot;: &quot;Viande et sous-produits animaux&quot;,<br>                &quot;id&quot;: &quot;fr:Viande et sous-produits animaux&quot;<br>            },<br>            {<br>                &quot;id&quot;: &quot;fr:légumes&quot;,<br>                &quot;text&quot;: &quot;légumes&quot;,<br>                &quot;rank&quot;: 2<br>            },<br>            {<br>                &quot;rank&quot;: 3,<br>                &quot;text&quot;: &quot;carottes et petits pois&quot;,<br>                &quot;percent&quot;: &quot;4&quot;,<br>                &quot;id&quot;: &quot;fr:carottes et petits pois&quot;<br>            },<br>            {<br>                &quot;text&quot;: &quot;substances minérales&quot;,<br>                &quot;rank&quot;: 4,<br>                &quot;id&quot;: &quot;fr:substances minérales&quot;<br>            },<br>            {<br>                &quot;text&quot;: &quot;poisson et sous-produit de poisson&quot;,<br>                &quot;rank&quot;: 5,<br>                &quot;id&quot;: &quot;fr:poisson et sous-produit de poisson&quot;<br>            },<br>            {<br>                &quot;id&quot;: &quot;fr:sucre&quot;,<br>                &quot;text&quot;: &quot;sucre&quot;,<br>                &quot;rank&quot;: 6<br>            },<br>            {<br>                &quot;text&quot;: &quot;veau&quot;,<br>                &quot;id&quot;: &quot;fr:veau&quot;,<br>                &quot;percent&quot;: &quot;4&quot;<br>            },<br>            {<br>                &quot;text&quot;: &quot;dinde&quot;,<br>                &quot;id&quot;: &quot;fr:dinde&quot;,<br>                &quot;percent&quot;: &quot;4&quot;<br>            }<br>        ],<br>        &quot;packaging_tags&quot;: [<br>            &quot;barquette&quot;<br>        ],<br>        &quot;pnns_groups_2&quot;: &quot;unknown&quot;,<br>        &quot;quantity_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;debug_param_sorted_langs&quot;: [<br>            &quot;fr&quot;<br>        ],<br>        &quot;ingredients_from_palm_oil_n&quot;: 0,<br>        &quot;unknown_ingredients_n&quot;: 22,<br>        &quot;pnns_groups_1_tags&quot;: [<br>            &quot;unknown&quot;<br>        ],<br>        &quot;_keywords&quot;: [<br>            &quot;nourriture&quot;,<br>            &quot;veau&quot;,<br>            &quot;complet&quot;,<br>            &quot;adulte&quot;,<br>            &quot;et&quot;,<br>            &quot;pour&quot;,<br>            &quot;la&quot;,<br>            &quot;chien&quot;,<br>            &quot;ragout&quot;,<br>            &quot;aliment&quot;,<br>            &quot;dinde&quot;,<br>            &quot;legume&quot;,<br>            &quot;aux&quot;,<br>            &quot;au&quot;,<br>            &quot;patee&quot;,<br>            &quot;orlando&quot;<br>        ],<br>        &quot;languages_hierarchy&quot;: [<br>            &quot;en:french&quot;<br>        ],<br>        &quot;cities_tags&quot;: [<br>            <br>        ],<br>        &quot;states_hierarchy&quot;: [<br>            &quot;en:to-be-checked&quot;,<br>            &quot;en:complete&quot;,<br>            &quot;en:nutrition-facts-completed&quot;,<br>            &quot;en:ingredients-completed&quot;,<br>            &quot;en:expiration-date-to-be-completed&quot;,<br>            &quot;en:packaging-code-to-be-completed&quot;,<br>            &quot;en:characteristics-completed&quot;,<br>            &quot;en:categories-completed&quot;,<br>            &quot;en:brands-completed&quot;,<br>            &quot;en:packaging-completed&quot;,<br>            &quot;en:quantity-completed&quot;,<br>            &quot;en:product-name-completed&quot;,<br>            &quot;en:photos-validated&quot;,<br>            &quot;en:photos-uploaded&quot;<br>        ],<br>        &quot;labels_prev_tags&quot;: [<br>            <br>        ],<br>        &quot;countries_hierarchy&quot;: [<br>            &quot;en:france&quot;<br>        ],<br>        &quot;allergens_lc&quot;: &quot;fr&quot;,<br>        &quot;misc_tags&quot;: [<br>            &quot;en:nutriscore-not-computed&quot;,<br>            &quot;en:nutrition-not-enough-data-to-compute-nutrition-score&quot;,<br>            &quot;en:nutrition-no-saturated-fat&quot;<br>        ],<br>        &quot;complete&quot;: 1,<br>        &quot;generic_name&quot;: &quot;Aliment complet pour chien adulte&quot;,<br>        &quot;image_front_small_url&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/front_fr.5.200.jpg&quot;,<br>        &quot;countries_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;pnns_groups_1&quot;: &quot;unknown&quot;,<br>        &quot;traces&quot;: &quot;&quot;,<br>        &quot;completed_t&quot;: 1431876748,<br>        &quot;purchase_places_tags&quot;: [<br>            &quot;france&quot;<br>        ],<br>        &quot;stores&quot;: &quot;Lidl&quot;,<br>        &quot;additives&quot;: &quot; [ viande-et-sous-produits-animaux -&gt; fr:viande-et-sous-produits-animaux  ]  [ viande-et-sous-produits -&gt; fr:viande-et-sous-produits  ]  [ viande-et-sous -&gt; fr:viande-et-sous  ]  [ viande-et -&gt; fr:viande-et  ]  [ viande -&gt; fr:viande  ]  [ 4-veau -&gt; fr:4-veau  ]  [ 4 -&gt; en:fd-c  ]  [ 4-dinde -&gt; fr:4-dinde  ]  [ 4 -&gt; en:fd-c  ]  [ legumes -&gt; fr:legumes  ]  [ 4-carottes-et-petits-pois -&gt; fr:4-carottes-et-petits-pois  ]  [ 4-carottes-et-petits -&gt; fr:4-carottes-et-petits  ]  [ 4-carottes-et -&gt; fr:4-carottes-et  ]  [ 4-carottes -&gt; fr:4-carottes  ]  [ 4 -&gt; en:fd-c  ]  [ substances-minerales -&gt; fr:substances-minerales  ]  [ substances -&gt; fr:substances  ]  [ poisson-et-sous-produit-de-poisson -&gt; fr:poisson-et-sous-produit-de-poisson  ]  [ poisson-et-sous-produit-de -&gt; fr:poisson-et-sous-produit-de  ]  [ poisson-et-sous-produit -&gt; fr:poisson-et-sous-produit  ]  [ poisson-et-sous -&gt; fr:poisson-et-sous  ]  [ poisson-et -&gt; fr:poisson-et  ]  [ poisson -&gt; fr:poisson  ]  [ sucre -&gt; fr:sucre  ] &quot;,<br>        &quot;brands_tags&quot;: [<br>            &quot;orlando&quot;<br>        ],<br>        &quot;ingredients_debug&quot;: [<br>            &quot;Viande et sous-produits animaux &quot;,<br>            &quot;(&quot;,<br>            &quot;(&quot;,<br>            null,<br>            null,<br>            &quot;4% veau&quot;,<br>            &quot;,&quot;,<br>            null,<br>            null,<br>            null,<br>            &quot; 4% dinde)&quot;,<br>            &quot;,&quot;,<br>            null,<br>            null,<br>            null,<br>            &quot; légumes &quot;,<br>            &quot;(&quot;,<br>            &quot;(&quot;,<br>            null,<br>            null,<br>            &quot;4% carottes et petits pois)&quot;,<br>            &quot;,&quot;,<br>            null,<br>            null,<br>            null,<br>            &quot; substances minérales&quot;,<br>            &quot;,&quot;,<br>            null,<br>            null,<br>            null,<br>            &quot; poisson et sous-produit de poisson&quot;,<br>            &quot;,&quot;,<br>            null,<br>            null,<br>            null,<br>            &quot; sucre.&quot;<br>        ],<br>        &quot;expiration_date&quot;: &quot;&quot;,<br>        &quot;ingredients_from_or_that_may_be_from_palm_oil_n&quot;: 0,<br>        &quot;categories_hierarchy&quot;: [<br>            &quot;en:pet-food&quot;,<br>            &quot;en:dog-food&quot;,<br>            &quot;en:wet-pet-food&quot;,<br>            &quot;en:wet-dog-food&quot;<br>        ],<br>        &quot;nutrition_score_debug&quot;: &quot;missing energy&quot;,<br>        &quot;ingredients_that_may_be_from_palm_oil_tags&quot;: [<br>            <br>        ],<br>        &quot;serving_size_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;categories_prev_hierarchy&quot;: [<br>            &quot;en:pet-food&quot;,<br>            &quot;en:dog-food&quot;,<br>            &quot;fr:Pâtées pour chiens&quot;<br>        ],<br>        &quot;manufacturing_places_tags&quot;: [<br>            <br>        ],<br>        &quot;correctors_tags&quot;: [<br>            &quot;teolemon&quot;,<br>            &quot;jeanbono&quot;,<br>            &quot;aleene&quot;,<br>            &quot;psine&quot;<br>        ],<br>        &quot;emb_codes_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;languages_codes&quot;: {<br>            &quot;fr&quot;: 6<br>        },<br>        &quot;ingredients_text_fr_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;link&quot;: &quot;&quot;,<br>        &quot;states_tags&quot;: [<br>            &quot;en:to-be-checked&quot;,<br>            &quot;en:complete&quot;,<br>            &quot;en:nutrition-facts-completed&quot;,<br>            &quot;en:ingredients-completed&quot;,<br>            &quot;en:expiration-date-to-be-completed&quot;,<br>            &quot;en:packaging-code-to-be-completed&quot;,<br>            &quot;en:characteristics-completed&quot;,<br>            &quot;en:categories-completed&quot;,<br>            &quot;en:brands-completed&quot;,<br>            &quot;en:packaging-completed&quot;,<br>            &quot;en:quantity-completed&quot;,<br>            &quot;en:product-name-completed&quot;,<br>            &quot;en:photos-validated&quot;,<br>            &quot;en:photos-uploaded&quot;<br>        ],<br>        &quot;traces_from_user&quot;: &quot;(fr)&quot;,<br>        &quot;_id&quot;: &quot;20106836&quot;,<br>        &quot;nutrition_data&quot;: &quot;on&quot;,<br>        &quot;ingredients_that_may_be_from_palm_oil_n&quot;: 0,<br>        &quot;selected_images&quot;: {<br>            &quot;ingredients&quot;: {<br>                &quot;display&quot;: {<br>                    &quot;fr&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/ingredients_fr.7.400.jpg&quot;<br>                },<br>                &quot;small&quot;: {<br>                    &quot;fr&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/ingredients_fr.7.200.jpg&quot;<br>                },<br>                &quot;thumb&quot;: {<br>                    &quot;fr&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/ingredients_fr.7.100.jpg&quot;<br>                }<br>            },<br>            &quot;nutrition&quot;: {<br>                &quot;display&quot;: {<br>                    &quot;fr&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/nutrition_fr.8.400.jpg&quot;<br>                },<br>                &quot;small&quot;: {<br>                    &quot;fr&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/nutrition_fr.8.200.jpg&quot;<br>                },<br>                &quot;thumb&quot;: {<br>                    &quot;fr&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/nutrition_fr.8.100.jpg&quot;<br>                }<br>            },<br>            &quot;front&quot;: {<br>                &quot;thumb&quot;: {<br>                    &quot;fr&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/front_fr.5.100.jpg&quot;<br>                },<br>                &quot;display&quot;: {<br>                    &quot;fr&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/front_fr.5.400.jpg&quot;<br>                },<br>                &quot;small&quot;: {<br>                    &quot;fr&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/front_fr.5.200.jpg&quot;<br>                }<br>            }<br>        },<br>        &quot;editors&quot;: [<br>            &quot;teolemon&quot;,<br>            &quot;jeanbono&quot;<br>        ],<br>        &quot;image_small_url&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/front_fr.5.200.jpg&quot;,<br>        &quot;last_image_t&quot;: 1490949164,<br>        &quot;interface_version_created&quot;: &quot;20120622&quot;,<br>        &quot;nutrition_data_prepared_per&quot;: &quot;serving&quot;,<br>        &quot;nutrition_grades_tags&quot;: [<br>            &quot;unknown&quot;<br>        ],<br>        &quot;countries_lc&quot;: &quot;fr&quot;,<br>        &quot;image_thumb_url&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/front_fr.5.100.jpg&quot;,<br>        &quot;image_nutrition_url&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/nutrition_fr.8.400.jpg&quot;,<br>        &quot;max_imgid&quot;: &quot;2&quot;,<br>        &quot;packaging&quot;: &quot;Barquette&quot;,<br>        &quot;brands_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;packaging_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;categories_lc&quot;: &quot;fr&quot;,<br>        &quot;no_nutrition_data&quot;: &quot;on&quot;,<br>        &quot;sortkey&quot;: 1548496986,<br>        &quot;lc&quot;: &quot;fr&quot;,<br>        &quot;product_quantity&quot;: 300,<br>        &quot;ingredients_text&quot;: &quot;Viande et sous-produits animaux (4% veau, 4% dinde), légumes (4% carottes et petits pois), substances minérales, poisson et sous-produit de poisson, sucre.&quot;,<br>        &quot;codes_tags&quot;: [<br>            &quot;code-8&quot;,<br>            &quot;20106836&quot;,<br>            &quot;2010683x&quot;,<br>            &quot;201068xx&quot;,<br>            &quot;20106xxx&quot;,<br>            &quot;2010xxxx&quot;,<br>            &quot;201xxxxx&quot;,<br>            &quot;20xxxxxx&quot;,<br>            &quot;2xxxxxxx&quot;<br>        ],<br>        &quot;amino_acids_tags&quot;: [<br>            <br>        ],<br>        &quot;purchase_places_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;labels_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;manufacturing_places&quot;: &quot;&quot;,<br>        &quot;additives_tags&quot;: [<br>            <br>        ],<br>        &quot;emb_codes&quot;: &quot;&quot;,<br>        &quot;allergens_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;nutrition_data_per&quot;: &quot;100g&quot;,<br>        &quot;update_key&quot;: &quot;key_1548591787&quot;,<br>        &quot;image_front_url&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/front_fr.5.400.jpg&quot;,<br>        &quot;categories&quot;: &quot;Nourriture pour animaux, Nourriture pour chiens, Pâtées pour chiens&quot;,<br>        &quot;last_modified_t&quot;: 1548496986,<br>        &quot;traces_from_ingredients&quot;: &quot;&quot;,<br>        &quot;origins&quot;: &quot;&quot;,<br>        &quot;image_ingredients_url&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/ingredients_fr.7.400.jpg&quot;,<br>        &quot;labels_lc&quot;: &quot;fr&quot;,<br>        &quot;interface_version_modified&quot;: &quot;20120622&quot;,<br>        &quot;additives_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;checkers_tags&quot;: [<br>            <br>        ],<br>        &quot;categories_debug_tags&quot;: [<br>            &quot;added-en-wet-pet-food&quot;,<br>            &quot;added-en-wet-dog-food&quot;,<br>            &quot;removed-fr-patees-pour-chiens&quot;<br>        ],<br>        &quot;last_edit_dates_tags&quot;: [<br>            &quot;2019-01-26&quot;,<br>            &quot;2019-01&quot;,<br>            &quot;2019&quot;<br>        ],<br>        &quot;additives_old_tags&quot;: [<br>            <br>        ],<br>        &quot;countries_tags&quot;: [<br>            &quot;en:france&quot;<br>        ],<br>        &quot;nova_groups&quot;: 1,<br>        &quot;ingredients_original_tags&quot;: [<br>            &quot;fr:Viande et sous-produits animaux&quot;,<br>            &quot;fr:légumes&quot;,<br>            &quot;fr:carottes et petits pois&quot;,<br>            &quot;fr:substances minérales&quot;,<br>            &quot;fr:poisson et sous-produit de poisson&quot;,<br>            &quot;fr:sucre&quot;,<br>            &quot;fr:veau&quot;,<br>            &quot;fr:dinde&quot;<br>        ],<br>        &quot;nova_group_debug&quot;: &quot;&quot;,<br>        &quot;vitamins_prev_tags&quot;: [<br>            <br>        ],<br>        &quot;brands&quot;: &quot;Orlando&quot;,<br>        &quot;emb_codes_20141016&quot;: &quot;&quot;,<br>        &quot;ingredients_tags&quot;: [<br>            &quot;fr:viande-et-sous-produits-animaux&quot;,<br>            &quot;&quot;,<br>            &quot;&quot;,<br>            &quot;fr:legumes&quot;,<br>            &quot;&quot;,<br>            &quot;&quot;,<br>            &quot;fr:carottes-et-petits-pois&quot;,<br>            &quot;&quot;,<br>            &quot;&quot;,<br>            &quot;fr:substances-minerales&quot;,<br>            &quot;&quot;,<br>            &quot;&quot;,<br>            &quot;fr:poisson-et-sous-produit-de-poisson&quot;,<br>            &quot;&quot;,<br>            &quot;&quot;,<br>            &quot;fr:sucre&quot;,<br>            &quot;&quot;,<br>            &quot;&quot;,<br>            &quot;fr:veau&quot;,<br>            &quot;&quot;,<br>            &quot;&quot;,<br>            &quot;fr:dinde&quot;<br>        ],<br>        &quot;languages_tags&quot;: [<br>            &quot;en:french&quot;,<br>            &quot;en:1&quot;<br>        ],<br>        &quot;emb_codes_orig&quot;: &quot;&quot;,<br>        &quot;labels_hierarchy&quot;: [<br>            <br>        ],<br>        &quot;pnns_groups_2_tags&quot;: [<br>            &quot;unknown&quot;<br>        ],<br>        &quot;manufacturing_places_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;minerals_prev_tags&quot;: [<br>            <br>        ],<br>        &quot;image_nutrition_small_url&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/nutrition_fr.8.200.jpg&quot;,<br>        &quot;id&quot;: &quot;20106836&quot;,<br>        &quot;entry_dates_tags&quot;: [<br>            &quot;2015-05-16&quot;,<br>            &quot;2015-05&quot;,<br>            &quot;2015&quot;<br>        ],<br>        &quot;product_name&quot;: &quot;Ragoût au veau, à la dinde et aux légumes&quot;,<br>        &quot;additives_prev_tags&quot;: [<br>            <br>        ],<br>        &quot;quantity&quot;: &quot;300 g&quot;,<br>        &quot;lang&quot;: &quot;fr&quot;,<br>        &quot;ingredients_from_palm_oil_tags&quot;: [<br>            <br>        ],<br>        &quot;additives_n&quot;: 0,<br>        &quot;purchase_places&quot;: &quot;France&quot;,<br>        &quot;nutrient_levels_tags&quot;: [<br>            &quot;en:fat-in-moderate-quantity&quot;<br>        ],<br>        &quot;additives_original_tags&quot;: [<br>            <br>        ],<br>        &quot;last_editor&quot;: &quot;psine&quot;,<br>        &quot;additives_prev_original_tags&quot;: [<br>            <br>        ],<br>        &quot;nova_group&quot;: 1,<br>        &quot;editors_tags&quot;: [<br>            &quot;teolemon&quot;,<br>            &quot;jeanbono&quot;,<br>            &quot;psine&quot;,<br>            &quot;aleene&quot;<br>        ],<br>        &quot;minerals_tags&quot;: [<br>            <br>        ],<br>        &quot;additives_prev_n&quot;: 0,<br>        &quot;lang_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;image_url&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/front_fr.5.400.jpg&quot;,<br>        &quot;image_ingredients_small_url&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/ingredients_fr.7.200.jpg&quot;,<br>        &quot;additives_prev&quot;: &quot; [ viande-et-sous-produits-animaux -&gt; fr:viande-et-sous-produits-animaux  ]  [ viande-et-sous-produits -&gt; fr:viande-et-sous-produits  ]  [ viande-et-sous -&gt; fr:viande-et-sous  ]  [ viande-et -&gt; fr:viande-et  ]  [ viande -&gt; fr:viande  ]  [ 4-veau -&gt; fr:4-veau  ]  [ 4 -&gt; en:fd-c  ]  [ 4-dinde -&gt; fr:4-dinde  ]  [ 4 -&gt; en:fd-c  ]  [ legumes -&gt; fr:legumes  ]  [ 4-carottes-et-petits-pois -&gt; fr:4-carottes-et-petits-pois  ]  [ 4-carottes-et-petits -&gt; fr:4-carottes-et-petits  ]  [ 4-carottes-et -&gt; fr:4-carottes-et  ]  [ 4-carottes -&gt; fr:4-carottes  ]  [ 4 -&gt; en:fd-c  ]  [ substances-minerales -&gt; fr:substances-minerales  ]  [ substances -&gt; fr:substances  ]  [ poisson-et-sous-produit-de-poisson -&gt; fr:poisson-et-sous-produit-de-poisson  ]  [ poisson-et-sous-produit-de -&gt; fr:poisson-et-sous-produit-de  ]  [ poisson-et-sous-produit -&gt; fr:poisson-et-sous-produit  ]  [ poisson-et-sous -&gt; fr:poisson-et-sous  ]  [ poisson-et -&gt; fr:poisson-et  ]  [ poisson -&gt; fr:poisson  ]  [ sucre -&gt; fr:sucre  ] &quot;,<br>        &quot;last_modified_by&quot;: &quot;psine&quot;,<br>        &quot;image_ingredients_thumb_url&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/ingredients_fr.7.100.jpg&quot;,<br>        &quot;traces_hierarchy&quot;: [<br>            <br>        ],<br>        &quot;states&quot;: &quot;en:to-be-checked, en:complete, en:nutrition-facts-completed, en:ingredients-completed, en:expiration-date-to-be-completed, en:packaging-code-to-be-completed, en:characteristics-completed, en:categories-completed, en:brands-completed, en:packaging-completed, en:quantity-completed, en:product-name-completed, en:photos-validated, en:photos-uploaded&quot;,<br>        &quot;nutrient_levels&quot;: {<br>            &quot;fat&quot;: &quot;moderate&quot;<br>        },<br>        &quot;created_t&quot;: 1431769156,<br>        &quot;allergens_from_user&quot;: &quot;(fr)&quot;,<br>        &quot;serving_quantity&quot;: 300,<br>        &quot;serving_size&quot;: &quot;300 g&quot;,<br>        &quot;nutrition_data_prepared_per_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;rev&quot;: 12,<br>        &quot;image_nutrition_thumb_url&quot;: &quot;https://static.openpetfoodfacts.org/images/products/20106836/nutrition_fr.8.100.jpg&quot;,<br>        &quot;ingredients_text_with_allergens&quot;: &quot;Viande et sous-produits animaux (4% veau, 4% dinde), légumes (4% carottes et petits pois), substances minérales, &lt;span class=\&quot;allergen\&quot;&gt;poisson&lt;/span&gt; et sous-produit de poisson, sucre.&quot;,<br>        &quot;labels_prev_hierarchy&quot;: [<br>            <br>        ],<br>        &quot;product_name_fr&quot;: &quot;Ragoût au veau, à la dinde et aux légumes&quot;,<br>        &quot;photographers_tags&quot;: [<br>            &quot;jeanbono&quot;<br>        ],<br>        &quot;categories_prev_tags&quot;: [<br>            &quot;en:pet-food&quot;,<br>            &quot;en:dog-food&quot;,<br>            &quot;fr:patees-pour-chiens&quot;<br>        ],<br>        &quot;images&quot;: {<br>            &quot;ingredients_fr&quot;: {<br>                &quot;white_magic&quot;: &quot;false&quot;,<br>                &quot;rev&quot;: &quot;7&quot;,<br>                &quot;geometry&quot;: &quot;1004x285-1113-1536&quot;,<br>                &quot;normalize&quot;: &quot;false&quot;,<br>                &quot;sizes&quot;: {<br>                    &quot;200&quot;: {<br>                        &quot;w&quot;: 200,<br>                        &quot;h&quot;: 57<br>                    },<br>                    &quot;full&quot;: {<br>                        &quot;h&quot;: 285,<br>                        &quot;w&quot;: 1004<br>                    },<br>                    &quot;400&quot;: {<br>                        &quot;w&quot;: 400,<br>                        &quot;h&quot;: 114<br>                    },<br>                    &quot;100&quot;: {<br>                        &quot;h&quot;: 28,<br>                        &quot;w&quot;: 100<br>                    }<br>                },<br>                &quot;imgid&quot;: &quot;2&quot;<br>            },<br>            &quot;nutrition_fr&quot;: {<br>                &quot;white_magic&quot;: &quot;false&quot;,<br>                &quot;rev&quot;: &quot;8&quot;,<br>                &quot;imgid&quot;: &quot;2&quot;,<br>                &quot;sizes&quot;: {<br>                    &quot;full&quot;: {<br>                        &quot;h&quot;: 425,<br>                        &quot;w&quot;: 971<br>                    },<br>                    &quot;200&quot;: {<br>                        &quot;h&quot;: 88,<br>                        &quot;w&quot;: 200<br>                    },<br>                    &quot;100&quot;: {<br>                        &quot;w&quot;: 100,<br>                        &quot;h&quot;: 44<br>                    },<br>                    &quot;400&quot;: {<br>                        &quot;w&quot;: 400,<br>                        &quot;h&quot;: 175<br>                    }<br>                },<br>                &quot;normalize&quot;: &quot;false&quot;,<br>                &quot;geometry&quot;: &quot;971x425-1130-1120&quot;<br>            },<br>            &quot;2&quot;: {<br>                &quot;uploader&quot;: &quot;jeanbono&quot;,<br>                &quot;sizes&quot;: {<br>                    &quot;400&quot;: {<br>                        &quot;h&quot;: 400,<br>                        &quot;w&quot;: 300<br>                    },<br>                    &quot;100&quot;: {<br>                        &quot;h&quot;: 100,<br>                        &quot;w&quot;: 75<br>                    },<br>                    &quot;full&quot;: {<br>                        &quot;h&quot;: 3264,<br>                        &quot;w&quot;: 2448<br>                    }<br>                },<br>                &quot;uploaded_t&quot;: 1431769168<br>            },<br>            &quot;1&quot;: {<br>                &quot;uploaded_t&quot;: 1431769157,<br>                &quot;uploader&quot;: &quot;jeanbono&quot;,<br>                &quot;sizes&quot;: {<br>                    &quot;100&quot;: {<br>                        &quot;h&quot;: 100,<br>                        &quot;w&quot;: 75<br>                    },<br>                    &quot;400&quot;: {<br>                        &quot;h&quot;: 400,<br>                        &quot;w&quot;: 300<br>                    },<br>                    &quot;full&quot;: {<br>                        &quot;w&quot;: 2448,<br>                        &quot;h&quot;: 3264<br>                    }<br>                }<br>            },<br>            &quot;front&quot;: {<br>                &quot;rev&quot;: &quot;5&quot;,<br>                &quot;white_magic&quot;: &quot;false&quot;,<br>                &quot;normalize&quot;: &quot;false&quot;,<br>                &quot;geometry&quot;: &quot;2080x2081-620-218&quot;,<br>                &quot;sizes&quot;: {<br>                    &quot;full&quot;: {<br>                        &quot;h&quot;: 2081,<br>                        &quot;w&quot;: 2080<br>                    },<br>                    &quot;200&quot;: {<br>                        &quot;w&quot;: 200,<br>                        &quot;h&quot;: 200<br>                    },<br>                    &quot;100&quot;: {<br>                        &quot;w&quot;: 100,<br>                        &quot;h&quot;: 100<br>                    },<br>                    &quot;400&quot;: {<br>                        &quot;w&quot;: 400,<br>                        &quot;h&quot;: 400<br>                    }<br>                },<br>                &quot;imgid&quot;: &quot;1&quot;<br>            },<br>            &quot;nutrition&quot;: {<br>                &quot;white_magic&quot;: &quot;false&quot;,<br>                &quot;rev&quot;: &quot;8&quot;,<br>                &quot;imgid&quot;: &quot;2&quot;,<br>                &quot;sizes&quot;: {<br>                    &quot;full&quot;: {<br>                        &quot;h&quot;: 425,<br>                        &quot;w&quot;: 971<br>                    },<br>                    &quot;200&quot;: {<br>                        &quot;h&quot;: 88,<br>                        &quot;w&quot;: 200<br>                    },<br>                    &quot;100&quot;: {<br>                        &quot;w&quot;: 100,<br>                        &quot;h&quot;: 44<br>                    },<br>                    &quot;400&quot;: {<br>                        &quot;w&quot;: 400,<br>                        &quot;h&quot;: 175<br>                    }<br>                },<br>                &quot;normalize&quot;: &quot;false&quot;,<br>                &quot;geometry&quot;: &quot;971x425-1130-1120&quot;<br>            },<br>            &quot;front_fr&quot;: {<br>                &quot;rev&quot;: &quot;5&quot;,<br>                &quot;white_magic&quot;: &quot;false&quot;,<br>                &quot;normalize&quot;: &quot;false&quot;,<br>                &quot;geometry&quot;: &quot;2080x2081-620-218&quot;,<br>                &quot;sizes&quot;: {<br>                    &quot;full&quot;: {<br>                        &quot;h&quot;: 2081,<br>                        &quot;w&quot;: 2080<br>                    },<br>                    &quot;200&quot;: {<br>                        &quot;w&quot;: 200,<br>                        &quot;h&quot;: 200<br>                    },<br>                    &quot;100&quot;: {<br>                        &quot;w&quot;: 100,<br>                        &quot;h&quot;: 100<br>                    },<br>                    &quot;400&quot;: {<br>                        &quot;w&quot;: 400,<br>                        &quot;h&quot;: 400<br>                    }<br>                },<br>                &quot;imgid&quot;: &quot;1&quot;<br>            },<br>            &quot;ingredients&quot;: {<br>                &quot;white_magic&quot;: &quot;false&quot;,<br>                &quot;rev&quot;: &quot;7&quot;,<br>                &quot;geometry&quot;: &quot;1004x285-1113-1536&quot;,<br>                &quot;normalize&quot;: &quot;false&quot;,<br>                &quot;sizes&quot;: {<br>                    &quot;200&quot;: {<br>                        &quot;w&quot;: 200,<br>                        &quot;h&quot;: 57<br>                    },<br>                    &quot;full&quot;: {<br>                        &quot;h&quot;: 285,<br>                        &quot;w&quot;: 1004<br>                    },<br>                    &quot;400&quot;: {<br>                        &quot;w&quot;: 400,<br>                        &quot;h&quot;: 114<br>                    },<br>                    &quot;100&quot;: {<br>                        &quot;h&quot;: 28,<br>                        &quot;w&quot;: 100<br>                    }<br>                },<br>                &quot;imgid&quot;: &quot;2&quot;<br>            }<br>        },<br>        &quot;nutrition_data_per_debug_tags&quot;: [<br>            <br>        ],<br>        &quot;ingredients_n_tags&quot;: [<br>            &quot;8&quot;,<br>            &quot;1-10&quot;<br>        ],<br>        &quot;nucleotides_tags&quot;: [<br>            <br>        ],<br>        &quot;traces_tags&quot;: [<br>            <br>        ],<br>        &quot;ingredients_text_debug&quot;: &quot;Viande et sous-produits animaux (4% veau, 4% dinde), légumes (4% carottes et petits pois), substances minérales, poisson et sous-produit de poisson, sucre.&quot;,<br>        &quot;nucleotides_prev_tags&quot;: [<br>            <br>        ]<br>    },<br>    &quot;code&quot;: &quot;20106836&quot;,<br>    &quot;status&quot;: 1,<br>    &quot;status_verbose&quot;: &quot;product found&quot;<br>}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        </span>
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="50" class="step-icon">
+                            <a name="2"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection2 success-icon"
+                                       style="margin-left: 20px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
+                                   style="display:block;">
+                                    <span class="top-level-step">
+                                                Entonces valido que el codigo de respuesta sea "200"
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                        <td width="100"><span class="top-level-step">0.01s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection2" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="2-0"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                Validando que el codigo de respuesta sea el esperado...
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="50" class="step-icon">
+                            <a name="3"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection3')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection3 success-icon"
+                                       style="margin-left: 20px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection3')"
+                                   style="display:block;">
+                                    <span class="top-level-step">
+                                                Y guardo la respuesta de la ejecucion del servicio
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                        <td width="100"><span class="top-level-step">0.03s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection3" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="3-0"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                Guardando la respuesta de la ejecución del servicio...
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0.03s</span></td>
+                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                <tr class="test-SUCCESS">
+                        <td colspan="2"></td>
+                    <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>7.85s</em></span></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+    <div id="beforefooter"></div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <span class="version">Serenity BDD version 2.1.7</span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function toggleDiv(divId) {
+            $("#" + divId).toggle();
+            var imgsrc = $(".img" + divId).attr('src');
+            if (imgsrc == 'images/plus.png') {
+                $(".img" + divId).attr("src", function () {
+                    return "images/minus.png";
+                });
+
+            } else {
+                $(".img" + divId).attr("src", function () {
+                    return "images/plus.png";
+                });
+            }
+        }
+    </script>
+
+
+    <script type="text/javascript">
+        //<![CDATA[
+
+        $(document).ready(function () {
+            $('img.screenshot').imgPreview({
+                imgCSS: {
+                    width: '500px'
+                },
+                distanceFromCursor: {top: 10, left: -200}
+            });
+        });
+
+        //]]>
+    </script>
+    <div id="imgPreviewContainer" style="position: absolute; top: 612px; left: 355px; display: none; " class=""><img
+                src="" style="display: none; "></div>
+    <div id="imgPreviewContainer2" style="position: absolute; top: 925px; left: 320px; display: none; " class="">
+        <img style="width: 200px; display: none; " src=""></div>
+    <div id="imgPreviewWithStyles" style="position: absolute; top: 1272px; left: 321px; display: none; " class="">
+        <img style="height: 200px; opacity: 1; display: none; " src=""></div>
+    <div id="imgPreviewWithStyles2" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+    <div id="imgPreviewWithStyles3" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+
+</div>
+</body>
+</html>

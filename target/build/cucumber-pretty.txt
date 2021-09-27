@@ -1,0 +1,40 @@
+@Ejercicio
+Característica: Ejercicio de Automatización metodo GET en APIs
+  Como colaborador de Everis
+  Quiero redactar y automatizar APIs
+  Para recibir respuestas a las solicitudes enviadas
+
+  @Ejercicio @MetodoGET
+  Escenario: Metodo GET a la API                                        [90m# src/test/resources/features/EjercicioGET.feature:10[0m
+    [32mDado [0m[32mque configuramos los headers[0m                                   [90m# EjercicioGetStepDefinition.queConfiguroLosHeaders(DataTable)[0m
+    [32mCuando [0m[32mse ejecuta el servicio con la configuracion de los headers[0m   [90m# EjercicioGetStepDefinition.seEjecutaElServicioConLaConfiguracionDeLosHeaders(DataTable)[0m
+    [32mEntonces [0m[32mverificamos que el codigo de respuesta sea el numero "[0m[32m[1m200[0m[32m"[0m [90m# EjercicioGetStepDefinition.verificamosQueElCodigoDeRespuestaSeaElNumero(int)[0m
+    [32mY [0m[32mse guarda la respuesta de la ejecucion del servicio[0m               [90m# EjercicioGetStepDefinition.seGuardaLaRespuestaDeLaEjecucionDelServicio()[0m
+
+@Ejercicio
+Característica: Ejercicio de Automatización metodo POST en APIs
+  Como colaborador de Everis
+  Quiero redactar y automatizar APIs
+  Para recibir respuestas a las solicitudes enviadas
+
+  @Ejercicio @MetodoPOST
+  Escenario: Metodo POST a la API                                     [90m# src/test/resources/features/EjercicioPOST.feature:10[0m
+    [32mDado [0m[32mque se configuran los headers[0m                                [90m# EjercicioPostStepDefinition.queSeConfiguranLosHeaders(DataTable)[0m
+    [32mY [0m[32mconfigurar el body[0m                                              [90m# EjercicioPostStepDefinition.configurarElBody(DataTable)[0m
+    [32mCuando [0m[32mse ejecuta el servicio con la configuracion del header[0m     [90m# EjercicioPostStepDefinition.seEjecutaElServicioConLaConfiguracionDelHeader(DataTable)[0m
+    [32mEntonces [0m[32mverificar que el codigo de respuesta sea el numero "[0m[32m[1m200[0m[32m"[0m [90m# EjercicioPostStepDefinition.verificarQueElCodigoDeRespuestaSeaElNumero(int)[0m
+    [32mY [0m[32mguardar la respuesta de la ejecucion del servicio[0m               [90m# EjercicioPostStepDefinition.guardarLaRespuestaDeLaEjecucionDelServicio()[0m
+
+@Ejercicio
+Característica: Ejercicio de Automatización metodo PUT en APIs
+  Como colaborador de Everis
+  Quiero redactar y automatizar APIs
+  Para recibir respuestas a las solicitudes enviadas
+
+  @Ejercicio @MetodoPUT
+  Escenario: Metodo PUT a la API                                            [90m# src/test/resources/features/EjercicioPUT.feature:10[0m
+    [32mDado [0m[32mque vamos a configurar los headers[0m                                 [90m# EjercicioPutStepDefinition.queVamosAConfigurarLosHeaders(DataTable)[0m
+    [32mY [0m[32mconfiguramos el body[0m                                                  [90m# EjercicioPutStepDefinition.configuramosElBody(DataTable)[0m
+    [32mCuando [0m[32mse ejecuta el servicio con configuracion de los headers[0m          [90m# EjercicioPutStepDefinition.seEjecutaElServicioConConfiguracionDeLosHeaders(DataTable)[0m
+    [32mEntonces [0m[32mverificamos que el codigo de respuesta muestre el numero "[0m[32m[1m200[0m[32m"[0m [90m# EjercicioPutStepDefinition.verificamosQueElCodigoDeRespuestaMuestreElNumero(int)[0m
+    [32mY [0m[32mguardamos la respuesta de la ejecucion del servicio[0m                   [90m# EjercicioPutStepDefinition.guardamosLaRespuestaDeLaEjecucionDelServicio()[0m

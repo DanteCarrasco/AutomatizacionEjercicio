@@ -1,0 +1,18 @@
+{
+    "id": 10,
+    "category": {
+        "id": 10,
+        "name": "John Doe"
+    },
+    "name": "name",
+    "photoUrls": [
+        "John Doe"
+    ],
+    "tags": [
+        {
+            "id": 10,
+            "name": "John Doe"
+        }
+    ],
+    "status": "status"
+}

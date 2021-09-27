@@ -1,0 +1,16 @@
+{
+    "status": "success",
+    "country": "Peru",
+    "countryCode": "PE",
+    "region": "LMA",
+    "regionName": "Lima",
+    "city": "Lima",
+    "zip": "",
+    "lat": -12.0464,
+    "lon": -77.0428,
+    "timezone": "America/Lima",
+    "isp": "America Movil Peru S.A.C.",
+    "org": "America Movil Peru S.A.C",
+    "as": "AS12252 America Movil Peru S.A.C.",
+    "query": "179.6.213.62"
+}

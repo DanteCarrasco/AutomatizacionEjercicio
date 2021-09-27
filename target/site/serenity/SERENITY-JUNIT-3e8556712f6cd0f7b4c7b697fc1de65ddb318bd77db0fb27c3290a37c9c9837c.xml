@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="2" name="Ejemplo de Automatización en APIs utilizando Drone Strikes" skipped="0" tests="2" time="5.77" timestamp="2021-08-10 01:27:28"><testcase name="Solicitud de consulta de Drone Strikes con escenario correcto"><failure message="El codigo esperado no es el correcto." type="java.lang.AssertionError">El codigo esperado no es el correcto.</failure><system-err>El codigo esperado no es el correcto.&#13;
+com.bdd.api.stepdefinition.AutomatizacionStepDefinitionUno.validoQueElCodigoDeRespuestaSea(AutomatizacionStepDefinitionUno.java:40)&#13;
+✽.valido que el codigo de respuesta sea el numero "200"(src/test/resources/features/EjemploUno.feature:17)&#13;
+</system-err></testcase><testcase name="Solicitud de consulta de Drone Strikes con escenario incorrecto"><failure message="El codigo esperado no es el correcto." type="java.lang.AssertionError">El codigo esperado no es el correcto.</failure><system-err>El codigo esperado no es el correcto.&#13;
+com.bdd.api.stepdefinition.EjemploAutomatizacionStepDefinition.validoQueElCodigoDeRespuestaSea(EjemploAutomatizacionStepDefinition.java:39)&#13;
+✽.valido que el codigo de respuesta sea "404"(src/test/resources/features/EjemploUno.feature:29)&#13;
+</system-err></testcase></testsuite>
